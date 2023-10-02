@@ -1,0 +1,263 @@
+{
+    "Presession": {
+        "Wait Screen": {
+            "Text": "Loading...\nDO NOT PRESS ANY BUTTONS!"
+        },
+        "Instruction Screen": {
+            "Title": "Welcome to the ABC Presession (ADD TITLE TEXT)",
+            "Text": "In the following you will answer some rating scales, and select some pictures (ADD INSTRUCTION TEXT USE \\n FOR NEW LINE)",
+            "Continue": "Press space to continue."
+        },
+        "Rate Desire Pre Screen": {
+            "Text": "Please indicate how much you want to drink alcohol right now.",
+            "Labels": [
+                "not at all",
+                "extremely"
+            ],
+            "Continue": "Press space to continue."
+        },
+        "Imagine Scenario Screen": {
+            "Title": "Please imagine you are in the following scenario:",
+            "Continue": "After 60 seconds the next screen will appear automatically."
+        },
+        "Close Eyes Screen": {
+            "Text": "Please close your eyes and imagine you are in this situation.",
+            "Continue": "After 30 seconds the next screen will appear automatically."
+        },
+        "Rate Desire Post Screen": {
+            "Text 1": "Please indicate how vivid your imagination was.",
+            "Labels 1": [
+                "not vivid at all",
+                "very vivid"
+            ],
+            "Text 2": "Please indicate how much you want to drink alcohol right now.",
+            "Labels 2": [
+                "not at all",
+                "extremely"
+            ],
+            "Continue": "Press space to continue."
+        },
+        "Imagine Two Weeks Screen": {
+            "Title": "Imagine what will happen in two weeks.",
+            "Text": "Imagine and carefully describe in detail a positive, specific, and vivid future events (big or small) which your are looking forward to. ",
+            "Continue": "Press space to continue.",
+            "Text 2": "Please indicate how vivid your imagination was.",
+            "Labels": [
+                "not vivid at all",
+                "very vivid"
+            ]
+        },
+        "Imagine One Month Screen": {
+            "Title": "Imagine what will happen in one month.",
+            "Text": "Imagine and carefully describe in detail a positive, specific, and vivid future events (big or small) which your are looking forward to. ",
+            "Continue": "Press space to continue.",
+            "Text 2": "Please indicate how vivid your imagination was.",
+            "Labels": [
+                "not vivid at all",
+                "very vivid"
+            ]
+        },
+        "Imagine Six Months Screen": {
+            "Title": "Imagine what will happen in six months.",
+            "Text": "Imagine and carefully describe in detail a positive, specific, and vivid future events (big or small) which your are looking forward to. ",
+            "Continue": "Press space to continue.",
+            "Text 2": "Please indicate how vivid your imagination was.",
+            "Labels": [
+                "not vivid at all",
+                "very vivid"
+            ]
+        },
+        "Imagine One Year Screen": {
+            "Title": "Imagine what will happen in one year.",
+            "Text": "Imagine and carefully describe in detail a positive, specific, and vivid future events (big or small) which your are looking forward to. ",
+            "Continue": "Press space to continue.",
+            "Text 2": "Please indicate how vivid your imagination was.",
+            "Labels": [
+                "not vivid at all",
+                "very vivid"
+            ]
+        },
+        "Imagine Consequence Screen": {
+            "Title": "SOME TITLE (CONSEQUENCE Imagine Screen))",
+            "Text": "SOME TEXT",
+            "Continue": "Press space to continue."
+        },
+        "End Screen": {
+            "Text": "Thank you for completing the presession.",
+            "Continue": "The window will close automatically after a few seconds."
+        },
+        "Gui Participant ID": {
+            "Title": "Enter the Participant ID",
+            "Field1": "Participant ID",
+            "Field2": "Sex",
+            "Options2": [
+                "male",
+                "female",
+                "other",
+                "prefer not to say"
+            ]
+        },
+        "Gui Overwrite": {
+            "Title": "Participant ID already exists.",
+            "Field1": "What to do?",
+            "Options1": [
+                "Overwrite",
+                "Enter different ID"
+            ]
+        },
+        "Scenario Rating": {
+            "Title": "1/4 Rating Scenarios",
+            "Instruction": "Back when you were still drinking alcohol.\nHow often did you drink alcohol when",
+            "Instruction Custom": "Add a custom scenario to complete the following sentece:\n\nBack when you were still drinking alcohol.\nHow often did you drink alcohol when...",
+            "Continue": "After selecting a value, click 'space' to continue.",
+            "Continue Custom": "After entering your scenario, press 'escape' to continue.",
+            "Labels": [
+                "never",
+                "always"
+            ],
+            "Questions": {
+                "Withdrawl": "you were suffering from not drinking alcohol or experiencing withdrawl symptoms.",
+                "Headache": "you had a headache.",
+                "Sad": "you felt sad.",
+                "Holiday": "you were on holiday and wanted to relax.",
+                "Worrying": "you were worrying about someone.",
+                "Concerned": "you were very concerned about something.",
+                "Desire": "you had a strong desire to drink alcohol to see what would happen.",
+                "Social": "someone offered you alcohol in a social situation.",
+                "Phantasy": "you phantasized about drinking alcohol.",
+                "Control": "you wanted to test your ability to control your drinking.",
+                "Craving": "you were physically desiring or craving alcohol.",
+                "Exhausted": "you were physically exhausted.",
+                "Pain": "you were in physical pain or had an injury.",
+                "Anger": "you were so angry you felt you could explode.",
+                "Watching": "you were watching someone else drinking alcohol at a bar or in a social setting.",
+                "Wrong": "you felt everything was going wrong for you.",
+                "Friends": "people you were drinking with before were encouraging you to drink alcohol.",
+                "Irritated": "you felt irritated.",
+                "Surprised": "you were surprised by the desire to drink alcohol.",
+                "Party": "you were feeling well or partying with others.",
+                "Custom": "Custom"
+            }
+        },
+        "Consequence Rating": {
+            "Title": "2/4 Rating Consequences",
+            "Instruction": "As a motivation to stop drinking, how important is it to you to",
+            "Instruction Custom": "Describe a motivation to stop drinking that is very important to you.",
+            "Continue": "After selecting a value, click 'space' to continue.",
+            "Continue Custom": "After entering your motivation, press 'escape' to continue.",
+            "Labels": [
+                "not at all important",
+                "very important"
+            ],
+            "Questions": {
+                "Family": "improve your relationship with your family?",
+                "Career": "be more successful in your career?",
+                "Custom": "Custom"
+            }
+        },
+        "Non-Alcoholic Rating": {
+            "Title": "3/4 Rating Non-Alcoholic Drinks",
+            "Instruction": "Rate how much you like this non-alcoholic drink.",
+            "Continue": "After selecting a value, click 'space' to continue.",
+            "Labels": [
+                "not at all",
+                "very much"
+            ]
+        },
+        "Non-Alcoholic Selection": {
+            "Gui Title": "Which type of non-alcoholic drinks do you prefer?",
+            "Gui Field1": "1) First preference",
+            "Gui Field2": "2) Second preference",
+            "Gui Field3": "3) Third preference",
+            "Gui Options": [
+                "Water",
+                "Sparkling",
+                "Non-Sparkling"
+            ],
+            "Title": "3/4 Selecting Non-Alcoholic Drinks",
+            "Instruction": "Select the 5 drinks you like best by clicking on them",
+            "Continue": "If you are happy with your selection, press 'space' to continue."
+        },
+        "Alcoholic Rating": {
+            "Title": "4/4 Rating Alcoholic Drinks",
+            "Instruction": "Back when you were still drinking alcohol.\nRate how often you drank alcoholic drinks like this.",
+            "Continue": "After selecting a value, click 'space' to continue.",
+            "Labels": [
+                "never",
+                "always"
+            ]
+        },
+        "Alcoholic Selection": {
+            "Gui Title": "Which type of alcoholic drinks did you drink most frequently?",
+            "Gui Field1": "1) Most frequently",
+            "Gui Field2": "2) Second most frequently",
+            "Gui Field3": "3) Least frequently",
+            "Gui Options": [
+                "Beer",
+                "Wine",
+                "Liquor"
+            ],
+            "Title": "4/4 Selecting Alcoholic Drinks",
+            "Instruction": "Select the 5 drinks that most closely resemble drinks you frequently had before quitting alcohol.",
+            "Continue": "If you are happy with your selection, press 'space' to continue."
+        }
+    },
+    "Experiment": {
+        "Load Presession": {
+            "Title": "Enter the Participant ID",
+            "Field1": "Participant ID"
+        },
+        "Additional Settings": {
+            "Additional Settings Screen": {
+                "Text": "This is the screen before scenario selection. Text needs to be determined.",
+                "Continue": "Press space to continue."
+            },
+            "Select Scenario": {
+                "Title": "Select a scenario for this session",
+                "Field1": "Scenario"
+            }
+        },
+        "Imagine Scenario": {
+            "Title": "Imagine the following scenario:",
+            "Continue": "Take your time and really try to imagine you are in this situation.\nAfter some time the next window will appear.",
+            "Scenarios": {
+                "Withdrawl": "Imagine you are suffering from not drinking alcohol or experiencing withdrawl symptoms.",
+                "Headache": "Imagine you have a headache.",
+                "Sad": "Imagine you feel sad.",
+                "Holiday": "Imagine you are on holiday and want to relax.",
+                "Worrying": "Imagine you are worrying about someone.",
+                "Concerned": "Imagine you are very concerned about something.",
+                "Desire": "Imagine you have a strong desire to drink alcohol to see what would happen.",
+                "Social": "Imagine someone offers you alcohol in a social situation.",
+                "Phantasy": "Imagine you are phantasizing about drinking alcohol.",
+                "Control": "Imagine you want to test your ability to control your drinking.",
+                "Craving": "Imagine you are physically desiring or craving alcohol.",
+                "Exhausted": "Imagine you are physically exhausted.",
+                "Pain": "Imagine you are in physical pain or have an injury.",
+                "Anger": "Imagine you are so angry you feel you could explode.",
+                "Watching": "Imagine you are watching someone else drinking alcohol at a bar or in a social setting.",
+                "Wrong": "Imagine you feel everything is going wrong for you.",
+                "Friends": "Imagine people you were drinking with before are encouraging you to drink alcohol.",
+                "Irritated": "Imagine you feel irritated.",
+                "Surprised": "Imagine you are surprised by the desire to drink alcohol.",
+                "Party": "Imagine you are feeling well or are partying with others."
+            },
+            "Neutral Title": "Here we need to add a title for the neutral screen",
+            "Neutral Continue": "Here we need to add a continue text for the neutral screen",
+            "Neutral Text": "Here we need to add text for the neutral screen."
+        },
+        "Consider Consequences": {
+            "Consequences": {
+                "Family": "Relationship with your family",
+                "Career": "Success in your career"
+            }
+        },
+        "Instructions": {
+            "Welcome Instruction": "In this experiment you will see images of different drinks. Each image will be slightly tilted to the right or left. The tilt is visible either immediately or after a short delay.\n\nYour task is to move the joystick according to the rotation:\n> If the image is to the left, push the joystick away from you.\n> If the image is rotated to the right, pull the joystick towards you.\n\nThe image will vanish the moment you moved the joystick all the way in the correct direction. Move the joystick back to the center position and press the trigger with your indexfinger to make the next image appear. \n\nTry to move the joystick as fast as possible without making mistakes!\n\nPress space to continue.",
+            "Practice Instruction": "You will now see a couple of practice images.\n\nDon't forget:\n> Image tilted to the LEFT = Push it away from you.\n> Image tilted to the RIGHT = Pull it towards you.\n\nPress space to start.",
+            "Trial Instruction": "You will now see additional images.\n\nDon't forget:\n> Image tilted to the LEFT = Push it away from you.\n> Image tilted to the RIGHT = Pull it towards you.\n\nReact as FAST AS POSSIBLE WITHOUT MAKING MISTAKES!\n\\Press space to start.",
+            "Break Instruction": "You have earned a break.\n\nWhen you are ready, press space to continue.",
+            "End Instruction": "The experiment is finished.\n\nThank you for your participation!\n\nPress space to end the experiment."
+        }
+    }
+}

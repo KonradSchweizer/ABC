@@ -1,0 +1,39 @@
+{
+    "Window Size": [
+        1920.0,
+        1080.0
+    ],
+    "Window Color": "black",
+    "Font Size": 0.07,
+    "Font Color": "white",
+    "Joystick Backend": "pyglet",
+    "Rotation Degrees": 3,
+    "Condition Codes": {
+        "1": "B",
+        "2": "B'",
+        "3": "AB'",
+        "4": "AB'C"
+    },
+    "Randomization": {
+        "1": {
+            "male": 1,
+            "female": 0
+        },
+        "2": {
+            "male": 1,
+            "female": 0
+        },
+        "3": {
+            "male": 1,
+            "female": 0
+        },
+        "4": {
+            "male": 1,
+            "female": 0
+        }
+    },
+    "N Scenarios": 5,
+    "N Consequences": 2,
+    "N Alcoholic Images": 10,
+    "N Non-Alcoholic Images": 10
+}
