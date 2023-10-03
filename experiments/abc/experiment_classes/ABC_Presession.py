@@ -532,7 +532,7 @@ class ABCPresession(Presession):
                     self.quit()
         
         self.win.flip()
-        
+    """     
     def add_own_scenario_consequence(self, rating_dict: dict):
         title_text = rating_dict["Title"]
         instruction_text = rating_dict["Instruction Custom"]
@@ -555,7 +555,44 @@ class ABCPresession(Presession):
                     continue
                 else:
                     return text_box.text
-                
+    """  
+    def add_own_scenario_consequence(self, rating_dict: dict):
+        title_text = rating_dict["Title"]
+        instruction_text = rating_dict["Instruction Custom"]
+        continue_text = rating_dict["Continue Custom"]
+        
+        title = visual.TextStim(self.win, text=title_text, color="white", pos=(0, 0.95), font="Arial", height=0.05)
+        instruction = visual.TextStim(self.win, text=instruction_text, color="white", pos=(0, 0.7), font="Arial", height=0.05)
+        text_box = visual.TextBox2(self.win, text="", color="white", pos=(0, 0.5), font="Arial", letterHeight=0.05, editable=True, borderColor="white", borderWidth=10, anchor="top")
+        continue_ = visual.TextStim(self.win, text=continue_text, color="white", pos=(0, -0.9), font="Arial", height=0.05)
+        
+        # Add a green button next to the text box
+        submit_button = visual.Rect(self.win, width=0.2, height=0.1, fillColor="green", pos=(0, -0.56))
+        submit_text = visual.TextStim(self.win, text="Submit", color="white", pos=submit_button.pos, font="Arial", height=0.05)
+        
+        to_draw = [title, instruction, text_box, continue_, submit_button, submit_text]
+        mouse = event.Mouse()
+        
+        while True:
+            for item in to_draw:
+                item.draw()
+            
+            if len(text_box.text) > 150:
+                warning_text = visual.TextStim(self.win, text="Maximum character limit reached (150)", color="red", pos=(0, 0.3), font="Arial", height=0.05)
+                warning_text.draw()
+            
+            self.win.flip()
+            
+            # Check for mouse click on the submit button
+            if mouse.isPressedIn(submit_button):
+                if len(text_box.text) <= 150:
+                    return text_box.text
+            
+            # Change functionality of the "escape" key to exit the experiment
+            if "escape" in event.getKeys():
+                self.win.close()
+                core.quit()
+
     def img_grid_selection(self, imgs: list, text_dict: dict, required_imgs: int = 5):
         """Creates an interactive grid selection screen to select images"""
         # Assertion
@@ -571,7 +608,7 @@ class ABCPresession(Presession):
 
         # Mouse
         mouse = event.Mouse(win=self.win)
-
+    
         # Randomise images
         shuffle(imgs)
 
