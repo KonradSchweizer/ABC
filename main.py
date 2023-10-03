@@ -1,5 +1,5 @@
-run_presession = False 
-run_experiment = True
+run_presession = True
+run_experiment = False
 if run_presession:
     from experiments.abc.experiment_classes.ABC_Presession import ABCPresession
     ABCPresession().run()
