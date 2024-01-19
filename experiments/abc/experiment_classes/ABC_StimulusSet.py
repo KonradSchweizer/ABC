@@ -153,4 +153,7 @@ class ABCStimulusSetPersonalization(ABCStimulusSet):
                  intialize_from_folders: bool = True) -> None:
         super().__init__(name, folder_path, intialize_from_folders)
     
-
+class ABCStimulusSetStandard(ABCStimulusSet):
+    """90 images used for the standard set"""
+    def __init__(self, name: str = None, folder_path: str = "experiments/abc/images/set_standard", initialize_from_folders: bool = True) -> None:
+        super().__init__(name, folder_path, initialize_from_folders)

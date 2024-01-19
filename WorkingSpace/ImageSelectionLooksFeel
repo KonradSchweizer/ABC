@@ -1,0 +1,172 @@
+from psychopy import visual, event
+from random import shuffle
+from psychopy.visual import ImageStim
+import os
+
+# Assuming that the minimize_window and maximize_window methods, as well as the img_grid_selection method, exist elsewhere in your code. 
+# If not, they will need to be implemented or removed for this code to work.
+
+class ImageSelector:
+    def __init__(self):
+        self.data = {}
+ 
+    
+    def maximize_window(self) -> None:
+        """Maximizes the window after showing gui."""
+        self.win.winHandle.maximize()
+        self.win.winHandle.activate()
+        self.win.winHandle.set_fullscreen(True)
+        self.win.flip()
+
+    def img_grid_selection(self, current_imgs, text):
+        # some logic related to image grid selection
+        pass
+#####################################################################################################################
+
+    def select_images(self, text: dict, category: str):
+            # Validate
+            if category not in ["alcoholic", "non_alcoholic"]:
+                raise ValueError("category must be either alcoholic or non_alcoholic")
+
+            # Initialize category dict
+            self.data[category] = {}
+
+            # The previous window minimization logic can be placed here if needed
+            #elf.minimize_window()
+
+            # Window initialization
+            win = visual.Window([1900, 1080], color='black', units='pix')
+
+            # Determine the path to the script's directory
+            script_directory = os.path.dirname(os.path.abspath(__file__))
+            parent_directory = os.path.dirname(script_directory)
+            # Define the relative path to the images folder
+            image_folder_name = "Selection"
+            image_path = os.path.join(
+                parent_directory,
+                "images",
+                image_folder_name
+            )
+            
+            # Rest of your code
+            positions = {
+                'Sparkling': [-600, 250],
+                'Non-Sparkling': [0, 250],
+                'Water': [600, 250],
+                'Beer': [-600, 250],
+                'Wine': [0, 250],
+                'Liquor': [600, 250]
+            }
+
+            items = {
+                name: ImageStim(
+                    win,
+                    image=os.path.join(image_path, f"{name.lower().replace('-', '_')}.png"),
+                    pos=[position[0], position[1] - 100],
+                    size=(300, 300)
+                )
+                for name, position in positions.items() if (category == "alcoholic" and name in ["Beer", "Wine", "Liquor"]) or (category == "non_alcoholic" and name in ["Sparkling", "Non-Sparkling", "Water"])
+            }
+            # Target positions
+            targets = {
+                '1st': {'pos': [-600, -250], 'stim': visual.TextStim(win, text='1st', font='Arial', pos=[-600, -250], height=50, color='white', wrapWidth=200)},
+                '2nd': {'pos': [0, -250], 'stim': visual.TextStim(win, text='2nd', font='Arial', pos=[0, -250], height=50, color='white', wrapWidth=200)},
+                '3rd': {'pos': [600, -250], 'stim': visual.TextStim(win, text='3rd', font='Arial', pos=[600, -250], height=50, color='white', wrapWidth=200)}
+            }
+            mouse = event.Mouse(win=win)
+            selected_item = None
+            initial_pos = None
+            if category == "alcoholic":
+                instruction_text = 'Arrange the drinks based on your past consumption preference, from most consumed (1st) to least consumed (3rd).'
+            else:
+                instruction_text = 'Arrange the drinks based on your future drinking preference, from most willing to be consumed (1st) to least willing to be consumed (3rd).'
+                
+            instruction = visual.TextStim(win, 
+                              text= instruction_text, 
+                              font='Arial', 
+                              pos=[0, 500],  # You can adjust this position as per your requirement
+                              height=30, 
+                              color='white', 
+                              wrapWidth=1600)
+            while True:
+                # Dragging logic
+                for item_name, item in items.items():
+                    if mouse.isPressedIn(item) and not selected_item:
+                        selected_item = item_name
+                        initial_pos = item.pos
+                    
+                if selected_item:
+                    items[selected_item].pos = mouse.getPos()
+                    if not mouse.getPressed()[0]:
+                        for target_name, target in targets.items():
+                            if abs(items[selected_item].pos[0] - target['pos'][0]) < 100 and abs(items[selected_item].pos[1] - target['pos'][1]) < 100:
+                                items[selected_item].pos = target['pos']
+                                break
+                        else:
+                            items[selected_item].pos = initial_pos
+                        selected_item = None
+
+                instruction.draw()
+                all_positioned = all([any([abs(item.pos[0] - target['pos'][0]) < 100 and abs(item.pos[1] - target['pos'][1]) < 100 for target in targets.values()]) for item in items.values()])
+                items_on_targets = [item for item in items.values() if any([abs(item.pos[0] - target['pos'][0]) < 100 and abs(item.pos[1] - target['pos'][1]) < 100 for target in targets.values()])]
+                unique_targets = len(set([tuple(item.pos) for item in items_on_targets]))
+
+                if all_positioned and unique_targets == len(items_on_targets):
+                    # Insert the selection building code here
+                    reset_button = visual.Rect(win, width=250, height=50, pos=[-250, 200], lineColor='red', fillColor=[1, 0, 0, 0.5]) #########################################
+                    reset_button_text = visual.TextStim(win, text="Reset Choices", font='Arial', pos=[-250, 200], height=30, color='white', wrapWidth=200)   #########################################             
+                    reset_button.draw()
+                    reset_button_text.draw()
+                    if mouse.isPressedIn(reset_button):
+                        for item_name, position in positions.items():
+                            if (category == "alcoholic" and item_name in ["Beer", "Wine", "Liquor"]) or (category == "non_alcoholic" and item_name in ["Sparkling", "Non-Sparkling", "Water"]):
+                                items[item_name].pos = position
+                    selection = {}
+                    for target_name, target in targets.items():
+                        for item_name, item in items.items():
+                            if abs(item.pos[0] - target['pos'][0]) < 100 and abs(item.pos[1] - target['pos'][1]) < 100:
+                                selection[target_name] = item_name
+
+                    prompt = visual.TextStim(win, text="Thank you for your Selection!", pos=[0, 300], font='Arial', height=30, color='white', wrapWidth=1600) ####################################
+                    prompt.draw()
+                    confirm_button = visual.Rect(win, width=250, height=50, pos=[250, 200], lineColor='lightgreen', fillColor=[0, 1, 0, 0.5]) #############
+                    confirm = visual.TextStim(win, text="Confirm Selection", pos=[250, 200], font='Arial', height=30, color='white') ####################################
+                    confirm_button.draw()
+                    confirm.draw()
+                    if mouse.isPressedIn(confirm_button):
+                        win.close()
+                        self.maximize_window()
+                        print(selection)
+                        return selection
+
+                # Drawing
+                win.flip()
+                for item in items.values():
+                    item.draw()
+                for target in targets.values():
+                    target['stim'].draw()
+
+                if 'escape' in event.getKeys():
+                    break
+            win.close()
+
+
+
+#####################################################################################################################
+
+
+
+
+
+
+
+    def run(self):
+        # Placeholder text and category for demonstration
+        text = {}
+        category = "non_alcoholic" # or "non_alcoholic"
+        self.select_images(text, category)
+
+# To run the code
+if __name__ == "__main__":
+    selector = ImageSelector()
+    selector.run()

@@ -17,6 +17,7 @@ class ExperimentSection:
         self.enabled = enabled
 
     def set_attributes(self, attribute_dict: dict = None) -> None:
+        
         """Sets the attributes of the ExperimentSection object."""
         for key, value in attribute_dict.items():
             setattr(self, key, value) 

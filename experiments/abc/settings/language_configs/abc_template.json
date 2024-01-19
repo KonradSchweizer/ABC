@@ -1,20 +1,20 @@
 {
     "Presession": {
         "Wait Screen": {
-            "Text": "Loading...\nDO NOT PRESS ANY BUTTONS!"
+            "Text": "Bildschirm lädt...\nBITTE KEINE KNÖPFE DRÜCKEN!"
         },
         "Instruction Screen": {
-            "Title": "Welcome to the ABC Presession (ADD TITLE TEXT)",
-            "Text": "In the following you will answer some rating scales, and select some pictures (ADD INSTRUCTION TEXT USE \\n FOR NEW LINE)",
-            "Continue": "Press space to continue."
+            "Title": "Herzlich Willkommen zum ersten Teil des neuen AntiAlkohol-Trainings.",
+            "Text": "Wir haben das Training weiterentwickelt, um Sie noch besser in Ihrer Abstinenz zu unterstützen. Wir haben unterschiedliche Versionen des Trainings für Sie vorbereitet, und Sie werden zufällig eine davon erhalten. Alle Trainingsversionen sind wirksam.\n\nWir bitten Sie heute, folgende Fragen zu beantworten:\n\n   1. Frühere Trinksituationen: In welchen Situationen haben Sie früher bevorzugt Alkohol getrunken?\n   2. Abstinenzmotive: Was motiviert Sie, abstinent bleiben zu wollen?\n   3. Lieblingsgetränke: Was waren Ihre bevorzugten alkoholischen Getränke und was wollen Sie künftig statt dessen trinken?\n\nDie Sitzung endet mit einer kurzen Vorstellungsübung, die Ihnen beim Anti-Alkohol-Training helfen kann.\n\nDie heutige Sitzung wird ca. 40 Minuten dauern.\n\nAlle Ihre Antworten bleiben vertraulich. Bitte wählen Sie die Antworten aus, die am ehesten auf Sie selbst zutreffen.\n\nWenden Sie sich bei Fragen an die Versuchsleitung.",
+            "Continue": "Bitte drücken sie die LEERTASTE, um fortzufahren."
         },
         "Rate Desire Pre Screen": {
-            "Text": "Please indicate how much you want to drink alcohol right now.",
+            "Text": "Auf einer Skala von 0 (Überhaupt nicht) bis 10 (Sehr stark), wie stark verspüren Sie derzeit das Verlangen, Alkohol zu konsumieren?",
             "Labels": [
-                "not at all",
-                "extremely"
+                "Überhaupt nicht",
+                "Sehr stark"
             ],
-            "Continue": "Press space to continue."
+            "Continue": "Bitte drücken Sie die LEERTASTE, um fortzufahren."
         },
         "Imagine Scenario Screen": {
             "Title": "Please imagine you are in the following scenario:",
@@ -25,22 +25,22 @@
             "Continue": "After 30 seconds the next screen will appear automatically."
         },
         "Rate Desire Post Screen": {
-            "Text 1": "Please indicate how vivid your imagination was.",
+            "Text 1": "Bitte bewerten Sie, wie lebhaft sich Ihre Vorstellung gerade auf einer auf der folgenden Skala: (Gar nicht lebhaft ~ Äußerst lebhaft) angefühlt hat.",
             "Labels 1": [
-                "not vivid at all",
-                "very vivid"
+                "Gar nicht lebhaft",
+                "Äußerst lebhaft"
             ],
-            "Text 2": "Please indicate how much you want to drink alcohol right now.",
+            "Text 2": "Auf einer Skala von 0 (Überhaupt nicht) bis 10 (Sehr stark), wie stark verspüren sie derzeit das Verlangen, Alkohol zu konsumieren?",
             "Labels 2": [
-                "not at all",
-                "extremely"
+                "Überhaupt nicht",
+                "Sehr stark"
             ],
-            "Continue": "Press space to continue."
+            "Continue": "Bitte drücken Sie die LEERTASTE, um fortzufahren."
         },
         "Imagine Two Weeks Screen": {
             "Title": "Imagine what will happen in two weeks.",
             "Text": "Imagine and carefully describe in detail a positive, specific, and vivid future events (big or small) which your are looking forward to. ",
-            "Continue": "Press space to continue.",
+            "Continue": "Bitte drücken Sie die LEERTASTE, um fortzufahren.",
             "Text 2": "Please indicate how vivid your imagination was.",
             "Labels": [
                 "not vivid at all",
@@ -50,7 +50,7 @@
         "Imagine One Month Screen": {
             "Title": "Imagine what will happen in one month.",
             "Text": "Imagine and carefully describe in detail a positive, specific, and vivid future events (big or small) which your are looking forward to. ",
-            "Continue": "Press space to continue.",
+            "Continue": "Bitte drücken Sie die LEERTASTE, um fortzufahren.",
             "Text 2": "Please indicate how vivid your imagination was.",
             "Labels": [
                 "not vivid at all",
@@ -60,7 +60,7 @@
         "Imagine Six Months Screen": {
             "Title": "Imagine what will happen in six months.",
             "Text": "Imagine and carefully describe in detail a positive, specific, and vivid future events (big or small) which your are looking forward to. ",
-            "Continue": "Press space to continue.",
+            "Continue": "Bitte drücken Sie die LEERTASTE, um fortzufahren.",
             "Text 2": "Please indicate how vivid your imagination was.",
             "Labels": [
                 "not vivid at all",
@@ -70,7 +70,7 @@
         "Imagine One Year Screen": {
             "Title": "Imagine what will happen in one year.",
             "Text": "Imagine and carefully describe in detail a positive, specific, and vivid future events (big or small) which your are looking forward to. ",
-            "Continue": "Press space to continue.",
+            "Continue": "Bitte drücken Sie die LEERTASTE, um fortzufahren.",
             "Text 2": "Please indicate how vivid your imagination was.",
             "Labels": [
                 "not vivid at all",
@@ -80,21 +80,21 @@
         "Imagine Consequence Screen": {
             "Title": "SOME TITLE (CONSEQUENCE Imagine Screen))",
             "Text": "SOME TEXT",
-            "Continue": "Press space to continue."
+            "Continue": "Bitte drücken Sie die LEERTASTE, um fortzufahren."
         },
         "End Screen": {
-            "Text": "Thank you for completing the presession.",
-            "Continue": "The window will close automatically after a few seconds."
+            "Text": "Geschafft! Dies ist das Ende Ihrer ersten Sitzung.",
+            "Continue": "Diese Seite wird automatisch nach 3 Sekunden verschwinden."
         },
         "Gui Participant ID": {
-            "Title": "Enter the Participant ID",
-            "Field1": "Participant ID",
-            "Field2": "Sex",
+            "Title": "Willkommen zur Anti-Alkohol-Einführungssitzung",
+            "Field1": "Fallnummer",
+            "Field2": "Geschlecht",
             "Options2": [
-                "male",
-                "female",
-                "other",
-                "prefer not to say"
+                "Mann",
+                "Frau",
+                "Anderes",
+                "Keine Angabe"
             ]
         },
         "Gui Overwrite": {
@@ -106,52 +106,82 @@
             ]
         },
         "Scenario Rating": {
-            "Title": "1/4 Rating Scenarios",
-            "Instruction": "Back when you were still drinking alcohol.\nHow often did you drink alcohol when",
-            "Instruction Custom": "Add a custom scenario to complete the following sentece:\n\nBack when you were still drinking alcohol.\nHow often did you drink alcohol when...",
-            "Continue": "After selecting a value, click 'space' to continue.",
-            "Continue Custom": "After entering your scenario, press 'escape' to continue.",
+            "Title": "Meine Trinksituationen",
+            "Instruction": "Wie häufig haben Sie im letzten Jahr Alkohol getrunken",
+            "Instruction Custom": "Falls Ihnen noch eine weitere Situation einfällt, in der Sie früher oft Alkohol getrunken haben, die aber hier nicht dabei war, tragen Sie diese Situation bitte in der Text-Box ein.\n\nKlicken Sie dann auf Fortfahren wenn Sie Ihre frühere Trinksituation beschrieben haben.\n\nFalls Sie Ihnen keine weitere Situation einfällt, klicken Sie bitte auf Keine Angabe\n\n Probieren Sie, sich so kurz wie möglich zu fassen.",
+            "Continue": "Bitte drücken Sie die LEERTASTE, um fortzufahren.",
+            "Continue Custom": " Bitte drücken Sie die LEERTASTE, um fortzufahren.",
             "Labels": [
-                "never",
-                "always"
+                "Nie",
+                "Immer"
             ],
             "Questions": {
-                "Withdrawl": "you were suffering from not drinking alcohol or experiencing withdrawl symptoms.",
-                "Headache": "you had a headache.",
-                "Sad": "you felt sad.",
-                "Holiday": "you were on holiday and wanted to relax.",
-                "Worrying": "you were worrying about someone.",
-                "Concerned": "you were very concerned about something.",
-                "Desire": "you had a strong desire to drink alcohol to see what would happen.",
-                "Social": "someone offered you alcohol in a social situation.",
-                "Phantasy": "you phantasized about drinking alcohol.",
-                "Control": "you wanted to test your ability to control your drinking.",
-                "Craving": "you were physically desiring or craving alcohol.",
-                "Exhausted": "you were physically exhausted.",
-                "Pain": "you were in physical pain or had an injury.",
-                "Anger": "you were so angry you felt you could explode.",
-                "Watching": "you were watching someone else drinking alcohol at a bar or in a social setting.",
-                "Wrong": "you felt everything was going wrong for you.",
-                "Friends": "people you were drinking with before were encouraging you to drink alcohol.",
-                "Irritated": "you felt irritated.",
-                "Surprised": "you were surprised by the desire to drink alcohol.",
-                "Party": "you were feeling well or partying with others.",
+                "Withdrawl": "wenn Sie Entzugserscheinungen hatten.",
+                "Headache": "wenn Sie Kopfschmerzen hatten.",
+                "Sad": "wenn Sie sich niedergeschlagen gefühlt haben.",
+                "Holiday": "wenn Sie im Urlaub waren und sich entspannen wollten.",
+                "Worrying": "wenn Sie sich über jemanden Sorgen gemacht haben.",
+                "Concerned": "wenn Sie sehr beunruhigt waren.",
+                "Desire": "wenn Sie den Drang gespürt haben, nur ein bisschen Alkohol zu trinken, um zu schauen, was passiert.",
+                "Social": "wenn Ihnen jemand bei einem geselligen Anlass Alkohol angeboten hat.",
+                "Phantasy": "wenn Sie sich vorgestellt haben, Alkohol zu trinken.",
+                "Control": "wenn Sie Ihre willentliche Kontrolle über das Trinken testen wollten.",
+                "Craving": "wenn Sie ein körperliches Bedürfnis oder Verlangen nach Alkohol hatten.",
+                "Exhausted": "wenn Sie körperlich erschöpft waren.",
+                "Pain": "wenn Sie körperliche Schmerzen oder eine Verletzung hatten.",
+                "Anger": "wenn Sie frustriert oder wütend waren.",
+                "Watching": "wenn Sie andere beim Trinken in einer Kneipe oder in Gesellschaft beobachtet haben.",
+                "Wrong": "wenn Sie das Gefühl hatten, das bei Ihnen alles schief läuft.",
+                "Friends": "wenn Leute, mit denen Sie früher getrunken haben, Sie wieder zum Trinken ermuntert haben.",
+                "Irritated": "wenn Sie innerlich verärgert waren.",
+                "Surprised": "wenn Sie vom Verlangen nach Alkohol überrascht wurden.",
+                "Party": "wenn es Ihnen gut ging oder Sie mit anderen gefeiert haben.",
                 "Custom": "Custom"
             }
         },
         "Consequence Rating": {
-            "Title": "2/4 Rating Consequences",
-            "Instruction": "As a motivation to stop drinking, how important is it to you to",
-            "Instruction Custom": "Describe a motivation to stop drinking that is very important to you.",
-            "Continue": "After selecting a value, click 'space' to continue.",
-            "Continue Custom": "After entering your motivation, press 'escape' to continue.",
+            "Title": "Meine Abstinenzmotive",
+            "Instruction": "Bitte bewerten Sie, wie wichtig das folgende Motiv für Ihre Abstinenz ist:",
+            "Instruction Custom": "Falls Sie Abstinenzmotive haben, die nicht aufgeführt wurden, tragen Sie diese bitte in der Text-Box ein und klicken Sie danach bitte auf Fortfahren.\n\nFalls die genannten Abstinenzmotive für Sie ausreichend waren, klicken Sie bitte auf Keine Angabe.",
+            "Continue": "Bitte drücken Sie die LEERTASTE, um fortzufahren.",
+            "Continue Custom": " Bitte drücken Sie die LEERTASTE, um fortzufahren.",
             "Labels": [
-                "not at all important",
-                "very important"
+                "Vollkommen unwichtig",
+                "Extrem wichtig"
             ],
             "Questions": {
-                "Family": "improve your relationship with your family?",
-                "Career": "be more successful in your career?",
+                "Improved general health": "Verbesserte allgemeine Gesundheit.",
+                "Extended life span": "Verlängertes Leben.",
+                "Prevention of alcohol related diseases": "Vermeiden von alkoholbedingten Krankheiten.",
+                "Increased energy levels": "Mehr Energie haben.",
+                "Better weight management": "Besseres Gewichtsmanagement",
+                "Better fitness and physical performance": "Bessere Fitness und körperliche Leistungsfähigkeit.",
+                "Better sleep quality": "Bessere Schlafqualität.",
+                "Confidence": "Steigerung meines Selbstvertrauens",
+                "Self worth": "Wiedergewinnung von Selbstachtung",
+                "Better mental health": "Bessere psychische Gesundheit",
+                "Increased emotional stability and strength": "Erhöhte emotionale Stabilität und Stärke.",
+                "Improved mental clarity and concentration": "Verbesserte geistige Klarheit und Konzentration.",
+                "Memory": "Verbessertes Gedächtnis.",
+                "Content": "Innere Zufriedenheit.",
+                "Relaxed": "Innere Gelassenheit.",
+                "Better relationship with your family": "Bessere Beziehung zu Ihrer Familie.",
+                "Better relationship with your partner": "Verbesserte Partnerschaft.",
+                "Be a better parent": "Ein besserer Elternteil sein.",
+                "Better relationship with your friends": "Bessere Beziehung zu meinen Freundinnen und Freunden.",
+                "Trust": "Das Vertrauen von anderen gewinnen.",
+                "Relationship":"Eine Partnerschaft haben.",
+                "Improved work performance and productivity": "Verbesserte Arbeitsleistung und Produktivität.",
+                "Increased job security": "Erhöhte Jobsicherheit.",
+                "Greater opportunities for career advancement": "Größere Chancen für beruflichen Aufstieg.",
+                "Better chances of getting a job": "Bessere Chancen auf einen Arbeitsplatz.",
+                "Improved self-control": "Verbesserte Selbstkontrolle.",
+                "Being a role model for others": "Ein Vorbild für andere sein.",
+                "Saving money": "Geld sparen.",
+                "Increased ability to reduce other harmful habits": "Erhöhte Fähigkeit, andere schädliche Gewohnheiten zu reduzieren.",
+                "Free time": "Aktive Freizeitgestaltung.",
+                "More time for hobbies": "Mehr Zeit für Hobbys.",
+                "Structure": "Stabile Tagesstruktur.",
                 "Custom": "Custom"
             }
         },
@@ -174,9 +204,9 @@
                 "Sparkling",
                 "Non-Sparkling"
             ],
-            "Title": "3/4 Selecting Non-Alcoholic Drinks",
-            "Instruction": "Select the 5 drinks you like best by clicking on them",
-            "Continue": "If you are happy with your selection, press 'space' to continue."
+            "Title": "Nicht Alkoholische Getränke",
+            "Instruction": "Bitte wählen Sie 5 Bilder aus, um ein Panel auszufüllen.\n\nWählen Sie die Bilder danach aus was Sie in Zukunft trinken möchten.\n\n1x Klicken wählt ein Getränk aus.\n\nErneut 1x Klicken auf ein ausgewähltes Getränk hebt die Auswahl auf.\n\n1x Klicken auf den ´Auswahl speichern und andere Bilder neu mischen` zeigt Ihnen neue Bilder für alle nicht ausgewählten Getränke.\n\nWenn 5 Bilder ausgewählt sind, können Sie diese mit der LEERTASTE speichern oder auf ´Auswahl speichern und andere Bilder neu mischen` drücken, um fortzufahren",
+            "Continue": "Wenn Sie mit Ihrer Auswahl zufrieden sind, drücken Sie die LEERTASTE um fortzufahren."
         },
         "Alcoholic Rating": {
             "Title": "4/4 Rating Alcoholic Drinks",
@@ -197,67 +227,97 @@
                 "Wine",
                 "Liquor"
             ],
-            "Title": "4/4 Selecting Alcoholic Drinks",
-            "Instruction": "Select the 5 drinks that most closely resemble drinks you frequently had before quitting alcohol.",
-            "Continue": "If you are happy with your selection, press 'space' to continue."
+            "Title": "Alkoholische Getränke",
+            "Instruction": "Bitte wählen Sie 5 Bilder aus, um ein Panel auszufüllen.\n\nWählen Sie die Bilder nachdem aus, was Sie früher besonders häufig getrunken haben.\n\n1x Klicken wählt ein Getränk aus.\n\nErneut 1x Klicken auf ein ausgewähltes Getränk hebt die Auswahl auf.\n\n1x Klicken auf ´Auswahl speichern und andere Bilder neu mischen` zeigt Ihnen neue Bilder für alle nicht ausgewählten Getränke.\n\nWenn 5 Bilder ausgewählt sind, können Sie diese mit der LEERTASTE speichern oder auf ´Auswahl speichern und andere Bilder neu mischen` drücken, um fortzufahren",
+            "Continue": "Wenn Sie mit Ihrer Auswahl zufrieden sind, drücken Sie die LEERTASTE, um fortzufahren."
         }
     },
     "Experiment": {
         "Load Presession": {
-            "Title": "Enter the Participant ID",
+            "Title": "Fallnummer",
             "Field1": "Participant ID"
         },
         "Additional Settings": {
             "Additional Settings Screen": {
-                "Text": "This is the screen before scenario selection. Text needs to be determined.",
-                "Continue": "Press space to continue."
+                "Text": "Sie werden nun eine Liste von verschiedenen Situationen sehen, die Sie in Ihrer ersten Sitzung als besonders häufige Trinksituation in der Vergangenheit angegeben haben.",
+                "Continue": "Bitte drücken Sie die LEERTASTE, um fortzufahren."
             },
             "Select Scenario": {
-                "Title": "Select a scenario for this session",
+                "Title": "Bitte wählen Sie eine der Situationen mit der MAUS aus. Drücken Sie anschließend auf Fortfahren.",
                 "Field1": "Scenario"
             }
         },
         "Imagine Scenario": {
-            "Title": "Imagine the following scenario:",
-            "Continue": "Take your time and really try to imagine you are in this situation.\nAfter some time the next window will appear.",
+            "Title": "Kurze Vorstellungsübung",
+            "Continue": "Bitte erinnern Sie sich an die Vorstellungsübung des Einführungstermins. Bitte nehmen Sie sich ein wenig Zeit, und denken Sie erneut and die folgende Situation:",
             "Scenarios": {
-                "Withdrawl": "Imagine you are suffering from not drinking alcohol or experiencing withdrawl symptoms.",
-                "Headache": "Imagine you have a headache.",
-                "Sad": "Imagine you feel sad.",
-                "Holiday": "Imagine you are on holiday and want to relax.",
-                "Worrying": "Imagine you are worrying about someone.",
-                "Concerned": "Imagine you are very concerned about something.",
-                "Desire": "Imagine you have a strong desire to drink alcohol to see what would happen.",
-                "Social": "Imagine someone offers you alcohol in a social situation.",
-                "Phantasy": "Imagine you are phantasizing about drinking alcohol.",
-                "Control": "Imagine you want to test your ability to control your drinking.",
-                "Craving": "Imagine you are physically desiring or craving alcohol.",
-                "Exhausted": "Imagine you are physically exhausted.",
-                "Pain": "Imagine you are in physical pain or have an injury.",
-                "Anger": "Imagine you are so angry you feel you could explode.",
-                "Watching": "Imagine you are watching someone else drinking alcohol at a bar or in a social setting.",
-                "Wrong": "Imagine you feel everything is going wrong for you.",
-                "Friends": "Imagine people you were drinking with before are encouraging you to drink alcohol.",
-                "Irritated": "Imagine you feel irritated.",
-                "Surprised": "Imagine you are surprised by the desire to drink alcohol.",
-                "Party": "Imagine you are feeling well or are partying with others."
+                "Withdrawl": "wenn Sie Entzugserscheinungen hatten.",
+                "Headache": "wenn Sie Kopfschmerzen hatten.",
+                "Sad": "wenn Sie sich niedergeschlagen gefühlt haben.",
+                "Holiday": "wenn Sie im Urlaub waren und sich entspannen wollten.",
+                "Worrying": "wenn Sie sich über jemanden Sorgen gemacht haben.",
+                "Concerned": "wenn Sie sehr beunruhigt waren.",
+                "Desire": "wenn Sie den Drang gespürt haben, nur ein bisschen Alkohol zu trinken, um zu schauen, was passiert.",
+                "Social": "wenn Ihnen jemand bei einem geselligen Anlass Alkohol angeboten hat.",
+                "Phantasy": "wenn Sie sich vorgestellt haben, Alkohol zu trinken.",
+                "Control": "wenn Sie Ihre willentliche Kontrolle über das Trinken testen wollten.",
+                "Craving": "wenn Sie ein körperliches Bedürfnis oder Verlangen nach Alkohol hatten.",
+                "Exhausted": "wenn Sie körperlich erschöpft waren.",
+                "Pain": "wenn Sie körperliche Schmerzen oder eine Verletzung hatten.",
+                "Anger": "wenn Sie frustriert oder wütend waren.",
+                "Watching": "wenn Sie andere beim Trinken in einer Kneipe oder in Gesellschaft beobachtet haben.",
+                "Wrong": "wenn Sie das Gefühl hatten, das bei Ihnen alles schief läuft.",
+                "Friends": "wenn Leute, mit denen Sie früher getrunken haben, Sie wieder zum Trinken ermuntert haben.",
+                "Irritated": "wenn Sie innerlich verärgert waren.",
+                "Surprised": "wenn Sie vom Verlangen nach Alkohol überrascht wurden.",
+                "Party": "wenn es Ihnen gut ging oder Sie mit anderen gefeiert haben."
             },
-            "Neutral Title": "Here we need to add a title for the neutral screen",
-            "Neutral Continue": "Here we need to add a continue text for the neutral screen",
-            "Neutral Text": "Here we need to add text for the neutral screen."
+            "Neutral Title": "Kurze Vorstellungsübung",
+            "Neutral Continue": "Bitte erinnern Sie sich an die Vorstellungsübung des Einführungstermins. Bitte nehmen Sie sich ein wenig Zeit und denken Sie erneut an die folgende Situation:",
+            "Neutral Text": "Denken Sie daran, wie Sie sich die Zähne putzen"
         },
         "Consider Consequences": {
             "Consequences": {
-                "Family": "Relationship with your family",
-                "Career": "Success in your career"
+                "Improved general health": "Verbesserte allgemeine Gesundheit.",
+                "Extended life span": "Verlängertes Leben.",
+                "Prevention of alcohol related diseases": "Vermeiden von alkoholbedingten Krankheiten.",
+                "Increased energy levels": "Mehr Energie haben.",
+                "Better weight management": "Besseres Gewichtsmanagement.",
+                "Better fitness and physical performance": "Bessere Fitness und körperliche Leistungsfähigkeit.",
+                "Better sleep quality": "Bessere Schlafqualität.",
+                "Confidence": "Steigerung meines Selbstvertrauens.",
+                "Self worth": "Wiedergewinnung von Selbstachtung.",
+                "Better mental health": "Bessere psychische Gesundheit.",
+                "Increased emotional stability and strength": "Erhöhte emotionale Stabilität und Stärke.",
+                "Improved mental clarity and concentration": "Verbesserte geistige Klarheit und Konzentration.",
+                "Memory": "Verbessertes Gedächtnis.",
+                "Content": "Innere Zufriedenheit.",
+                "Relaxed": "Innere Gelassenheit.",
+                "Better relationship with your family": "Bessere Beziehung zu Ihrer Familie.",
+                "Better relationship with your partner": "Verbesserte Partnerschaft.",
+                "Be a better parent": "Ein besserer Elternteil sein.",
+                "Better relationship with your friends": "Bessere Beziehung zu meinen Freundinnen und Freunden.",
+                "Trust": "Das Vertrauen von anderen gewinnen.",
+                "Relationship":"Eine Partnerschaft haben.",
+                "Improved work performance and productivity": "Verbesserte Arbeitsleistung und Produktivität.",
+                "Increased job security": "Erhöhte Jobsicherheit.",
+                "Greater opportunities for career advancement": "Größere Chancen für beruflichen Aufstieg.",
+                "Better chances of getting a job": "Bessere Chancen auf einen Arbeitsplatz.",
+                "Improved self-control": "Verbesserte Selbstkontrolle.",
+                "Being a role model for others": "Ein Vorbild für andere sein.",
+                "Saving money": "Geld sparen.",
+                "Increased ability to reduce other harmful habits": "Erhöhte Fähigkeit, andere schädliche Gewohnheiten zu reduzieren.",
+                "Free time": "Aktive Freizeitgestaltung.",
+                "More time for hobbies": "Mehr Zeit für Hobbys.",
+                "Structure": "Stabile Tagesstruktur."
             }
         },
         "Instructions": {
-            "Welcome Instruction": "In this experiment you will see images of different drinks. Each image will be slightly tilted to the right or left. The tilt is visible either immediately or after a short delay.\n\nYour task is to move the joystick according to the rotation:\n> If the image is to the left, push the joystick away from you.\n> If the image is rotated to the right, pull the joystick towards you.\n\nThe image will vanish the moment you moved the joystick all the way in the correct direction. Move the joystick back to the center position and press the trigger with your indexfinger to make the next image appear. \n\nTry to move the joystick as fast as possible without making mistakes!\n\nPress space to continue.",
-            "Practice Instruction": "You will now see a couple of practice images.\n\nDon't forget:\n> Image tilted to the LEFT = Push it away from you.\n> Image tilted to the RIGHT = Pull it towards you.\n\nPress space to start.",
-            "Trial Instruction": "You will now see additional images.\n\nDon't forget:\n> Image tilted to the LEFT = Push it away from you.\n> Image tilted to the RIGHT = Pull it towards you.\n\nReact as FAST AS POSSIBLE WITHOUT MAKING MISTAKES!\n\\Press space to start.",
-            "Break Instruction": "You have earned a break.\n\nWhen you are ready, press space to continue.",
-            "End Instruction": "The experiment is finished.\n\nThank you for your participation!\n\nPress space to end the experiment."
+            "Welcome Instruction": "In dieser Trainingssitzung werden Sie Bilder von verschiedenen Getränken sehen. Jedes Bild wird leicht nach rechts oder links geneigt sein.\n\nIhre Aufgabe ist es, den Joystick entsprechend der Neigung zu bewegen:\n> Wenn das Bild nach LINKS gedreht ist, SCHIEBEN Sie es mit dem Joystick von sich weg.\n> Wenn das Bild nach RECHTS gedreht ist, ZIEHEN Sie es mit dem Joystick zu sich heran.\n\nDas Bild verschwindet in dem Moment, in dem Sie den Joystick vollständig in die richtige Richtung bewegt haben. Bewegen Sie den Joystick danach zurück in die Mittelposition und drücken Sie den Auslöser mit Ihrem Zeigefinger, um das nächste Bild erscheinen zu lassen. \n\nVersuchen Sie, den Joystick so schnell wie möglich zu bewegen, ohne Fehler zu machen!",
+            "Practice Instruction": "Jetzt sehen Sie einige Übungsbilder.\n\nVergessen Sie nicht:\n> Bild nach LINKS geneigt = Schieben Sie es von sich weg.\n> Bild nach RECHTS geneigt = Ziehen Sie es zu sich heran.",
+            "Trial Instruction": "Jetzt werden Sie zusätzliche Bilder sehen.\n\nVergessen Sie nicht:\n> Bild nach LINKS geneigt = Schieben Sie es von sich weg.\n> Bild nach RECHTS geneigt = Ziehen Sie es zu sich heran.\n\nReagieren Sie SO SCHNELL WIE MÖGLICH OHNE FEHLER ZU MACHEN!",
+            "Break Instruction": "Sie haben nun eine Pause verdient.",
+            "End Instruction": "Die Trainingssitzung ist nun beendet.\n\nVielen Dank für Ihre Teilnahme!"
         }
     }
 }

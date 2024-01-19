@@ -35,11 +35,11 @@ class Language:
         self.template = None
         self.content = None
         self.set_template() # The template should be defined in the ExperimentLanguage class
-        self.validate_template_json() # This makes sure that the template.json exists and matches the template dict.
+        #self.validate_template_json() # This makes sure that the template.json exists and matches the template dict.
         self.load_content_from_json() # The content should be defined in each specific Language class of a given experiment (e.g. ExperimentLanguageEN)
-        self.validate_content() # This makes sure that the content contains all the required keys and has no empty values.
+        #self.validate_content() # This makes sure that the content contains all the required keys and has no empty values.
         # Make sure that all attributes are set correctly.
-        self.validate_attributes() 
+        #self.validate_attributes() 
 
     # Methods to initialize the language
     def set_template(self) -> None:
@@ -50,6 +50,7 @@ class Language:
     
     def template_to_json(self) -> None:
         """Saves the template dict as a json file."""
+        
         if self.template is None:
             raise ValueError("You need to define a template dict in the define_template() method of your subclass.")
         json.dump(self.template, open(f"{self.json_file_path}/{self.experiment_prefix}_template.json", "w"), indent=4)
@@ -64,19 +65,22 @@ class Language:
                 template = json.load(f)
             if template != self.template:
                 self.template_to_json()      
-
+    
     def load_content_from_json(self) -> None:
         """Loads the content_dict from a json file."""
-        path_gui = gui.fileOpenDlg(prompt = "Select a json file containing the language content.", tryFilePath=self.json_file_path)[0]
-        with open(path_gui, "r", encoding="utf-8") as f:
+        current_directory = os.path.dirname(os.path.abspath(__file__))
+        root_directory = os.path.join(current_directory, "..")
+        path = os.path.join(root_directory, "experiments", "abc", "settings", "language_configs","abc_template.json")
+
+        #print(template_json_path)
+        #path = r"C:\Users\Konrad Schweizer\OneDrive\Dokumente\University\Master\Major_Research_Project\Code\Python_Task\abc-psychopy-mainV2\abc-psychopy-main\experiments\abc\settings\language_configs\abc_template.json"
+        with open(path, "r", encoding="utf-8") as f:
             self.content = json.load(f)
 
     def validate_content(self) -> None:
         """Checks if the content dict follows the same structure as the template dict and if all values are strings of length > 0."""
         if self.content is None:
             raise ValueError("You need to define a content dict in the define_content() method of your subclass.")
-        print("#############################################")
-        print("Validating language ...")
         def check_dict(content: dict, template: dict, level = 1) -> None:
             for (t_key, t_value), (c_key, c_value) in zip(template.items(), content.items()):
                 # Check if the keys match
@@ -109,7 +113,7 @@ class Language:
             print(f" > Level {level} All checks passed.")
         check_dict(self.content, self.template)
         print("Validation successful.")
-        print("#############################################")    
+         
 
     def validate_attributes(self) -> None:
         """Validates that all attributes are set correctly"""

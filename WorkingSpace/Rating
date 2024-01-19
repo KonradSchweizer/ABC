@@ -1,0 +1,196 @@
+from psychopy import visual, core
+from typing import List
+import random
+import numpy as np
+from matplotlib.colors import LinearSegmentedColormap
+import os
+
+###################
+# Global Settings #
+###################
+##
+# ABCFeedback Class #                                                                                            
+#####################
+class ABCFeedback:
+    """Superclass for different feedback types."""
+    def __init__(self) -> None:
+        self.win = None 
+        self.correct = 0
+        self.incorrect = 0
+        self.consequences = None
+    
+    def add_win(self, win: visual.Window) -> None:
+        """Adds a window to the Feedback object. 
+        This should be gathered from the ExperimentSection where this Feedback is used."""
+        if not isinstance(win, visual.Window):
+            raise TypeError("win must be of type visual.Window")
+        self.win = win
+    
+    def add_consequences(self, consequences: List[str]):
+        """Adds a list of consequences to the Feedback.
+        These should come from the participants config file."""
+        if not isinstance(consequences, list):
+            raise TypeError("consequences must be of type list")
+        self.consequences = consequences
+    
+    def reset_correct_incorrect(self):
+        self.correct = 0
+        self.incorrect = 0   
+
+    def present_feedback(self):
+        pass      
+
+class MeterFeedback(ABCFeedback):
+    """Displays a meter for each consequence that can be filled between 0 and 100%.
+    Correct behavior increases the meters, while incorrect behavior decreases them."""
+    def __init__(self, 
+                 perc: float = 0, # Defines the starting percent for the meter 
+                 increment: float = 1): # Defines the increment that the meter will change by for each correct and incorrect trial
+        super().__init__()
+        self.perc = perc
+        self.increment = increment
+    
+    def add_consequences(self, consequences: List[str]):
+        """Uses method from superclass."""
+        super().add_consequences(consequences)
+        self.xmins = [0]  # Since we are displaying only one consequence, this will suffice
+    """
+    def draw_meter(self, chosen_consequence: str) -> None:
+        
+        if self.consequences is None:
+            raise("No consequences added to MeterFeedback object")
+        if not isinstance(self.win, visual.Window):
+            raise("No window was added to the MeterFeedback.")
+        
+        self.win.color = "black"
+        
+        xmin = self.xmins[0]
+        # bar outline
+        outline_xmin = xmin
+        outline_xmax = xmin + 0.02
+        outline_ymin = 0
+        outline_ymax = 0.7
+        visual.ShapeStim(win=self.win, vertices=((outline_xmax, outline_ymin), (outline_xmin, outline_ymin), (outline_xmin, outline_ymax), (outline_xmax, outline_ymax)), fillColor="black", lineColor="red").draw()
+        # bar fill
+        fill_xmin = outline_xmin + 0.002
+        fill_xmax = outline_xmax - 0.002
+        fill_ymin = outline_ymin + 0.005
+        fill_ymax = outline_ymax - 0.005
+        fill_y = fill_ymin + ((fill_ymax-fill_ymin)) * self.perc
+        if self.perc > 0.66:
+            fill_col = "green"
+        elif self.perc < 0.33:
+            fill_col = "red"
+        else:
+            fill_col = "yellow"
+        visual.ShapeStim(win=self.win, vertices=((fill_xmax, fill_ymin), (fill_xmin, fill_ymin), (fill_xmin, fill_y), (fill_xmax, fill_y)), fillColor=fill_col, lineColor="black").draw()
+        # text
+        txt_x = xmin
+        txt_y = outline_ymin - 0.08 
+        visual.TextStim(win=self.win, text=f"{self.perc*100:.0f}% {chosen_consequence}", pos=(txt_x, txt_y), color="white", font="Arial", height=0.07, wrapWidth=0.4).draw()
+        self.win.flip()
+        """
+    def create_colormap(self):
+        colors = [(1, 0, 0), (1, 1, 0), (0, 1, 0)]  # R -> Y -> G
+        self.cm = LinearSegmentedColormap.from_list('custom_div_cmap', colors, N=100)
+
+    def draw_meter(self, chosen_consequence: str) -> None:
+        # Bar outline
+        import os
+
+        image = os.path.abspath(os.path.join(os.getcwd(), "experiments", "abc", "images", "Arrow.png"))
+        xmin = self.xmins[0]
+        outline_xmin = xmin - 0.15
+        outline_xmax = xmin + 0.15
+        outline_ymax = 0.69
+        outline_ymin = -0.69
+        if not hasattr(self, 'cm'):
+            self.create_colormap()
+
+        if not hasattr(self, 'arrow_image'):
+            self.arrow_image1 = visual.ImageStim(win=self.win, image=image, interpolate=True)
+            
+            # Adjust position based on your preference
+            arrow1_x_position = outline_xmax + 0.1 
+            arrow_y_position = 0  
+            self.arrow_image1.pos = (arrow1_x_position, arrow_y_position)
+            
+
+
+        if self.consequences is None:
+            raise ValueError("No consequences added to MeterFeedback object")
+        if not isinstance(self.win, visual.Window):
+            raise ValueError("No window was added to the MeterFeedback.")
+
+        self.win.color = "black"
+
+        visual.ShapeStim(win=self.win, vertices=((outline_xmax, outline_ymin), (outline_xmin, outline_ymin), 
+                        (outline_xmin, outline_ymax), (outline_xmax, outline_ymax)), 
+                        fillColor="black", lineColor="white").draw()
+        
+                # Bar fill with gradient color
+        fill_xmin = outline_xmin + 0.002
+        fill_xmax = outline_xmax - 0.002
+        fill_height = (outline_ymax - outline_ymin) * self.perc
+        num_segments = 100
+        segment_height = (outline_ymax - outline_ymin) / num_segments
+
+        for i in range(int(num_segments * self.perc)):
+            segment_ymin = outline_ymin + i * segment_height
+            segment_ymax = outline_ymin + (i + 1) * segment_height
+
+            # Get color from the colormap
+            color = [c*2-1 for c in self.cm(i/num_segments)[:5]]
+
+            visual.ShapeStim(win=self.win, vertices=((fill_xmax, segment_ymin), (fill_xmin, segment_ymin), 
+                            (fill_xmin, segment_ymax), (fill_xmax, segment_ymax)), 
+                            fillColor=color, lineColor=None).draw()
+        if self.perc < .74:    
+            visual.TextStim(win=self.win, text=f"{self.perc*100:.0f}%", pos=(0,0), 
+                        color= "white", font="Arial", height= 0.2, wrapWidth=0.4).draw()
+        else:
+            visual.TextStim(win=self.win, text=f"{self.perc*100:.0f}%", pos=(0,0), color= "black", font="Arial", height= 0.2, wrapWidth=0.4).draw()
+        # Text
+        
+        visual.TextStim(win=self.win, text=f"{chosen_consequence}", pos=(0, 0.75), 
+                    color= "white", font="Arial", height= 0.1, wrapWidth=0.4).draw()
+        self.arrow_image1.draw()
+
+        self.win.flip()
+    
+
+        
+    def present_feedback(self, n_frames = 50) -> None:
+        """Presents the meter and updates it for n_frames."""
+        # Randomly choose a consequence to display
+        chosen_consequence = random.choice(self.consequences)
+        old_perc = self.perc
+        new_perc = self.perc + (self.increment * self.correct) - (self.increment * self.incorrect)
+        if new_perc >= 1:
+            new_perc = 1
+        elif new_perc <= 0:
+            new_perc = 0
+        if new_perc != old_perc:
+            update_frame = (new_perc - old_perc) / n_frames
+            for f in range(n_frames):
+                self.perc += update_frame
+                self.draw_meter(chosen_consequence) 
+            core.wait(1)
+        self.perc = new_perc
+
+
+if __name__ == '__main__':
+    # Create a PsychoPy window
+    win = visual.Window(size=(1900, 1080), color="black", units="norm")
+    
+    # Create a MeterFeedback instance
+    feedback = MeterFeedback()
+    feedback.add_win(win)
+    feedback.add_consequences(["Stonks"])
+
+    # Loop to update and show the meter
+    for _ in range(10):
+        feedback.correct = 1  # Increase correct by 1 for testing
+        feedback.present_feedback()  # Wait half a second between each feedback presentation
+
+    win.close()

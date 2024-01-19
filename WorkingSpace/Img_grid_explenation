@@ -1,0 +1,95 @@
+from psychopy import visual, event
+import os
+
+def get_user_input():
+    """
+    Waits for the user to press a key and returns an action based on the key pressed.
+    """
+    keys = event.waitKeys(keyList=['space', 'left', 'right'])
+    if 'space' in keys:
+        return 'next'
+    elif 'left' in keys:
+        return 'previous'
+    elif 'right' in keys:
+        return 'skip'
+    return None
+
+def draw_navigation_hints(win):
+    """
+    Draws hints on the screen to guide the user on how to navigate.
+    """
+    hints = [
+        ("Drücken SIe die Leertaste um fortzufahren", (0, -0.9)),
+        ("Drücken Sie die linke Pfeiltaste um auf die vorherige Folie zu kommen", (-0.6, -0.95)),
+        ("Drücken Sie auf die Rechte Pfeiltaste um auf die nächste Folie zu kommen", (0.6, -0.95))
+    ]
+    for text, pos in hints:
+        hint_stim = visual.TextStim(win, text=text, color="white", pos=pos, height=0.05, wrapWidth=1.8)
+        hint_stim.draw()
+
+def explain_img_grid_selection():
+    # Create a window for displaying everything
+    win = visual.Window(size=(1600, 900), color="black", units="norm")
+    
+    # Pre-loading all images and text stimuli.
+    # Replace these paths with the appropriate image paths on your machine.
+    img_paths = {
+        "1": "C:/Users/Konrad Schweizer/Downloads/selection_5_deselect_initiation.png",
+        "2": "C:/Users/Konrad Schweizer/Downloads/selection_5_deselect_end.png",
+        "3": "C:/Users/Konrad Schweizer/Downloads/To_lillte_juice.png",
+        "4": "C:/Users/Konrad Schweizer/Downloads/More_juice.png"
+    }
+    imgs = {key: visual.ImageStim(win, image=path, pos=(0, 0)) for key, path in img_paths.items()}
+    for img in imgs.values():
+        img.size = [i/3 for i in img.size]
+
+    # Define text prompts for the user. Modify these as needed.
+    texts = [
+        "This is a small visual explenation of the following Image selection task.",
+        "First you will see a grid of images on the left",
+        "Click with your mouse on the once that you like",
+        "You can select up to 5 images at once",
+        "If you want to remove an image from your selection, click on it again",
+        "In the case that you found 5 images that you like press space to continue",
+        "If you do not like any of the images, or if you only like a few, presss the button on the right to save your selection and shuffle the rest of the images",
+        "Repeat this process until you have selected 5 images"
+        # ... add the rest of the text prompts here...
+    ]
+    text_stimuli = [visual.TextStim(win, text=t, color="white", pos=(0, 0), font="Arial", height=0.07, wrapWidth=1.8) for t in texts]
+    
+    # Define the sequence in which to show the images and text prompts.
+    slides = [
+            lambda: text_stimuli[0].draw(),
+            lambda: text_stimuli[1].draw(),
+            lambda: text_stimuli[2].draw(),
+            lambda: text_stimuli[3].draw(),
+            lambda: imgs["1"].draw(),
+            lambda: text_stimuli[4].draw(),
+            lambda: imgs["2"].draw(),
+            lambda: text_stimuli[5].draw(),
+            lambda: text_stimuli[6].draw(),
+            lambda: imgs["3"].draw(),
+            lambda: imgs["4"].draw(),
+            lambda: text_stimuli[7].draw(),
+        ]
+
+    index = 0
+    while index < len(slides):
+        # Draw slide
+        slides[index]()
+        draw_navigation_hints(win)
+        win.flip()
+
+        # Wait for user input and handle navigation
+        action = get_user_input()
+        if action == 'next':
+            index += 1
+        elif action == 'previous':
+            index = max(0, index - 1)
+        elif action == 'skip':
+            index += 2
+
+    win.close()
+
+# Call the function
+explain_img_grid_selection()

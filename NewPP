@@ -1,0 +1,66 @@
+
+new_condition = ""
+gender = "male"
+session = 0 
+import shutil
+
+
+
+import os
+import glob
+import json
+
+path_to_delete_directory = r"C:\Users\Konrad Schweizer\OneDrive\Dokumente\University\Master\Major_Research_Project\Code\Python_Task\abc-psychopy-mainV2\abc-psychopy-main\experiments\abc\output\123456"
+path_to_files = r"C:\Users\Konrad Schweizer\OneDrive\Dokumente\Univers  ity\Master\Major_Research_Project\Code\Python_Task\abc-psychopy-mainV2\abc-psychopy-main\experiments\abc\settings\participant_configs\123456\ABC_session*"
+
+def delete_directory(target_path):
+    """Delete a directory and all its contents."""
+    try:
+        shutil.rmtree(target_path)
+        print(f"Directory {target_path} has been deleted successfully!")
+    except Exception as e:
+        print(f"Error occurred while deleting {target_path}. Reason: {e}")
+
+def delete_files_with_pattern(target_path):
+    """Delete files that match the pattern."""
+    try:
+        files_to_delete = glob.glob(target_path)
+        for file in files_to_delete:
+            os.remove(file)
+            print(f"File {file} has been deleted successfully!")
+    except Exception as e:
+        print(f"Error occurred while deleting files. Reason: {e}")
+
+delete_directory(path_to_delete_directory)
+delete_files_with_pattern(path_to_files)
+
+
+
+# Specify the path to the JSON file
+path = "C:\\Users\\Konrad Schweizer\\OneDrive\\Dokumente\\University\\Master\\Major_Research_Project\\Code\\Python_Task\\abc-psychopy-mainV2\\abc-psychopy-main\\experiments\\abc\\settings\\participant_configs\\123456\\ABC_presession_123456.json"
+
+# Load the JSON file
+with open(path, 'r') as file:
+    data = json.load(file)
+
+# Change the "Condition" value
+  # Replace 'new_value' with your desired condition
+data["Condition"] = new_condition
+data["Sex"] = gender
+data["Current Session"] = session
+data["Condition_saved"] = new_condition 
+
+# Change the "Current Session" value to 0
+#data["Current Session"] = 0
+
+# Save the updated JSON back to the file
+with open(path, 'w') as file:
+    json.dump(data, file, indent=4)
+
+print(f"Condition updated to '{new_condition}' and Current Session updated to 0 in {path}.")
+
+from experiments.abc.experiment_classes.ABC_Experiment import ABCExperiment
+exp = ABCExperiment() 
+exp.prepare_experiment() 
+exp.run_experiment()                      
+    

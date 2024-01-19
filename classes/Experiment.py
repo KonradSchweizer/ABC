@@ -11,17 +11,22 @@
 from datetime import datetime
 import json
 import os
-from psychopy import visual, gui
+from psychopy import visual, gui, event
 from psychopy.hardware import joystick
 from typing import Tuple
+import tkinter as tk
+from tkinter import ttk
 
 # Local modules
 from classes.ExperimentSection import ExperimentSection
+
 from classes.Language import Language
 
+
 ####################
-# Experiment class #                                                                                 #
+# Experiment class #                                                                                 
 ####################
+
 class Experiment:
     """ 
     The Experiment class builds the basis for all experiments.
@@ -95,6 +100,7 @@ class Experiment:
             self.language = self.language.content # The Language object has a content dict containing all text is displayed in the experiment.
 
     def validate_attributes(self) -> None:
+        print("validate attributes")
         """Makes sure that all required attributes are set."""
         if self.config_path is None:
             raise ValueError("config_path must be specified")
@@ -127,14 +133,57 @@ class Experiment:
             raise ValueError("Add at least one condition")
         
     # Methods to prepare the experiment
+    """
     def load_presession(self):
-        """Loads the presession file according to a participant ID from the config_path."""
         gui_title = self.language["Experiment"]["Load Presession"]["Title"]
         field_label = self.language["Experiment"]["Load Presession"]["Field1"]
         participant = {field_label: ""}
         gui.DlgFromDict(dictionary=participant, title=gui_title)
         with open(f"{self.config_path}/{participant['Participant ID']}/{self.experiment_prefix}_presession_{participant['Participant ID']}.json", "r", encoding="utf-8") as f:
             self.presession = json.load(f)
+    """
+    def load_presession(self):
+        print("load presession")
+        window = tk.Tk()
+        window.title("Training")
+        window.geometry('1600x900')
+        window.configure(bg='black')
+        window.attributes('-fullscreen', True)
+        error_label = tk.Label(window, text="", bg='black', fg='red', font=("Arial", 24))
+
+        def validate_input():
+            participant_id = participant_id_entry.get()
+            if len(participant_id) == 6 and participant_id.isdigit() and os.path.exists(f"{self.config_path}/{participant_id}"):
+                with open(f"{self.config_path}/{participant_id}/{self.experiment_prefix}_presession_{participant_id}.json", "r", encoding="utf-8") as f:
+                    self.presession = json.load(f)
+                window.destroy()
+            else:
+                if len(participant_id) != 6 or not participant_id.isdigit():
+                    error_label.config(text="Ungültige Fallnummer")
+                    error_label.pack(pady=10)
+                else: 
+                    if not os.path.exists(f"{self.config_path}/{participant_id}"):
+                        error_label.config(text="Fallnummer hat keine Pre-session Datei")
+                        error_label.pack(pady=20)
+
+        # Add a title label at the top, with larger font and light grey color
+        title_label = tk.Label(window, text="Anti-Alcohol Training", font=("Arial", 24), bg="black", fg="white")
+        title_label.pack(pady=20)  # Slightly reduced padding for better layout
+
+        # Add a label for the fall number, with specified font, background, and foreground color
+        label = tk.Label(window, text="Fallnummer", font=("Arial", 20), bg="black", fg="white")
+        label.pack(pady=40)  # Adjusted padding for better layout
+
+        # Add an entry widget for participant ID
+        participant_id_entry = tk.Entry(window, font=("Arial", 20))
+        participant_id_entry.pack(pady=20)  # Adjusted padding for better layout
+
+        # Add a submit button with specified text, font, command, and foreground color
+        submit_btn = tk.Button(window, text="Fortfahren", font=("Arial", 20), command=validate_input, fg="blue")
+        submit_btn.pack(pady=20)  # Adjusted padding for better layout
+
+        window.mainloop()
+    
     
     def additional_settings(self):
         """If the experiments requires additional settings, they can be added here.
@@ -142,15 +191,18 @@ class Experiment:
         pass
 
     def presession_to_data(self):
+        print("presession to data")
         """If info (e.g., participant id) from the presession file needs to be added to the data dictionary, this can be done here.
         This needs to be overwritten by subclasses."""
         pass
 
     def define_output_file_name(self):
+        print("define output file name")
         """Can be overwritten by subclasses to define the output file name."""
         return f"{self.data['ID']}_{datetime.now().strftime('%Y_%m_%d')}"
 
     def create_output_file(self):
+        print("create output file")
         """Creates the output file."""
         # Check if folder for ID exits, if not create it
         if not os.path.isdir(f"{self.output_path}/{self.data['ID']}"):
@@ -167,6 +219,7 @@ class Experiment:
         self.output_path = filename
     
     def prepare_experiment(self) -> None:
+        print("prepare experiment")
         self.load_presession()
         self.presession_to_data()
         self.additional_settings()
@@ -178,22 +231,27 @@ class Experiment:
             "output_path": self.output_path
         }
         for section in self.sections:
-            section.set_attributes(attributes) # All sections use the same window, joystick, and output path
+            section.set_attributes(attributes)# All sections use the same window, joystick, and output path
             section.initialize_section()
 
     # Methods for running the experiment
     def run_experiment(self) -> None:
+        print("run experiment")
         for section in self.sections:
             print(f"Running section {section.name}")
             section.run_section()
-    
+        self.update_session_number()
+
+
     # Other Methods
     def minimize_window(self) -> None:
+        print("minimize window")
         """Minimizes the window before showing gui."""
         self.win.winHandle.set_fullscreen(False)
         self.win.winHandle.minimize()
         self.win.flip()
     
     def maximize_window(self) -> None:
+        print("maximize window")
         """Maximizes the window after showing gui."""
         self.set_window_and_joystick() # no idea why, but the maximizing method used in presession doesnt work here...

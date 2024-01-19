@@ -17,7 +17,7 @@ class ABCLanguage(Language):
     """Template to create language configs for the ABC experiment"""
     def __init__(self,
                  experiment_prefix: str = "abc",
-                 json_file_path: str = "experiments/abc/settings/language_configs"):
+                 json_file_path: str = "experiments/abc/settings/language_configs/abc/abc_template.json"):
         super().__init__(experiment_prefix, json_file_path)
     
     def set_template(self) -> None:
@@ -29,7 +29,7 @@ class ABCLanguage(Language):
                         "Presession": {
                             # Wait screen to prevent participants from mashing buttons
                             "Wait Screen": {
-                                "Text": "Loading...\nDO NOT PRESS ANY BUTTONS!"
+                                "Text": "Bilschwirm lädt...\n Bitte keine Tasten drücken!"
                             },
                             # The Instruction Screen at the beginning of the presession
                             "Instruction Screen": {
@@ -178,7 +178,7 @@ class ABCLanguage(Language):
                                 # Consequence texts. These will be appended to the general instruction.
                                 "Questions": {
                                     "Family": "improve your relationship with your family?",
-                                    "Career": "be more successful in your career?",
+                                    "Career": "be more successful in your career PENIS?",
                                     "Custom": "Custom"
                                 }
                             },
@@ -310,11 +310,11 @@ class ABCLanguage(Language):
                             }, 
                             # Text for instruction screens
                             "Instructions": {
-                                "Welcome Instruction": "In this experiment you will see images of different drinks. Each image will be slightly tilted to the right or left. The tilt is visible either immediately or after a short delay.\n\nYour task is to move the joystick according to the rotation:\n> If the image is to the left, push the joystick away from you.\n> If the image is rotated to the right, pull the joystick towards you.\n\nThe image will vanish the moment you moved the joystick all the way in the correct direction. Move the joystick back to the center position and press the trigger with your indexfinger to make the next image appear. \n\nTry to move the joystick as fast as possible without making mistakes!\n\nPress space to continue.",
-                                "Practice Instruction": "You will now see a couple of practice images.\n\nDon't forget:\n> Image tilted to the LEFT = Push it away from you.\n> Image tilted to the RIGHT = Pull it towards you.\n\nPress space to start.",
-                                "Trial Instruction": "You will now see additional images.\n\nDon't forget:\n> Image tilted to the LEFT = Push it away from you.\n> Image tilted to the RIGHT = Pull it towards you.\n\nReact as FAST AS POSSIBLE WITHOUT MAKING MISTAKES!\n\Press space to start.",
-                                "Break Instruction": "You have earned a break.\n\nWhen you are ready, press space to continue.",
-                                "End Instruction": "The experiment is finished.\n\nThank you for your participation!\n\nPress space to end the experiment."
+                            "Welcome Instruction": "In dieser Session werden Sie Bilder von verschiedenen Getränken sehen. Jedes Bild wird leicht nach rechts oder links geneigt sein.\n\nIhre Aufgabe ist es, den Joystick entsprechend der Rotation zu bewegen:\n> Wenn das Bild nach links zeigt, schieben Sie den Joystick von sich weg.\n> Wenn das Bild nach rechts gedreht ist, ziehen Sie den Joystick zu sich heran.\n\nDas Bild verschwindet in dem Moment, in dem Sie den Joystick vollständig in die richtige Richtung bewegt haben. Bewegen Sie den Joystick zurück in die Mittelposition und drücken Sie den Auslöser mit Ihrem Zeigefinger, um das nächste Bild erscheinen zu lassen. \n\nVersuchen Sie, den Joystick so schnell wie möglich zu bewegen, ohne Fehler zu machen!\n\nDrücken Sie die Leertaste, um fortzufahren.",
+                            "Practice Instruction": "Jetzt sehen Sie einige Übungsbilder.\n\nVergessen Sie nicht:\n> Bild nach LINKS geneigt = Schieben Sie es von sich weg.\n> Bild nach RECHTS geneigt = Ziehen Sie es zu sich heran.\n\nDrücken Sie die Leertaste, um zu starten.",
+                            "Trial Instruction": "Jetzt werden Sie zusätzliche Bilder sehen.\n\nVergessen Sie nicht:\n> Bild nach LINKS geneigt = Schieben Sie es von sich weg.\n> Bild nach RECHTS geneigt = Ziehen Sie es zu sich heran.\n\nReagieren Sie SO SCHNELL WIE MÖGLICH OHNE FEHLER ZU MACHEN!\n\nDrücken Sie die Leertaste, um zu starten.",
+                            "Break Instruction": "Sie haben eine Pause verdient.\n\nWenn Sie bereit sind, drücken Sie die Leertaste, um fortzufahren.",
+                            "End Instruction": "Die Session ist nun beendet.\n\nVielen Dank für Ihre Teilnahme!\n\nDrücken Sie die Leertaste."
                             }
                     }
         }

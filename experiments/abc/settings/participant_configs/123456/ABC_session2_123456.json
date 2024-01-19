@@ -1,0 +1,31 @@
+{
+    "Participant ID": "123456",
+    "Session": 2,
+    "Assessment": [
+        {
+            "code": "PREAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/alcoholic/Liquor/l_13_1_t.jpg"
+        },
+        {
+            "code": "PREAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/alcoholic/Beer/beer_3.jpg"
+        }
+    ],
+    "Training": [
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_33_4_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_53_8_t.jpg"
+        }]
+    }

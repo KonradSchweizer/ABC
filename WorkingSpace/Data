@@ -1,0 +1,107 @@
+import os
+import ctypes
+import datetime
+import shutil
+import tkinter as tk
+
+# Function to get all available drives
+def get_drives():
+    drives = []
+    bitmask = ctypes.windll.kernel32.GetLogicalDrives()
+    for letter in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
+        if bitmask & 1:
+            drives.append(letter)
+        bitmask >>= 1
+    return drives
+
+# Function to find the first available removable drive (USB stick) with a specific name
+def find_usb_drive_with_name(target_name):
+    DRIVE_REMOVABLE = 2
+    for drive in get_drives():
+        drive_path = f"{drive}:/"
+        if (
+            ctypes.windll.kernel32.GetDriveTypeW(drive_path) == DRIVE_REMOVABLE
+            and os.path.basename(drive_path) == target_name
+        ):
+            return drive_path
+    return None
+
+# Function to check if the text document with specific content exists
+def text_document_with_content_exists(folder, file_name, target_content):
+    file_path = os.path.join(folder, file_name)
+    if os.path.exists(file_path):
+        with open(file_path, 'r') as file:
+            content = file.read()
+        return content == target_content
+    return False
+
+# Define the name of the specific USB drive
+usb_drive_name = "210x2ABC"
+
+# Find the USB drive with the specific name
+usb_drive = find_usb_drive_with_name(usb_drive_name)
+
+if usb_drive is None:
+    print(f"USB drive with the name '{usb_drive_name}' is not connected.")
+    exit()
+
+# Define the fixed external drive and create a folder with the current date and time
+external_drive = "c:\\Save"
+current_datetime = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M")
+current_datetime_folder = os.path.join(external_drive, f"AATsave_{current_datetime}")
+
+# Create the folder if it doesn't exist
+if not os.path.exists(current_datetime_folder):
+    os.makedirs(current_datetime_folder)
+
+# Define the paths to the source directories
+config_path = os.path.abspath(os.path.join(os.getcwd(), "experiments", "abc", "settings", "participant_configs"))
+output_path = os.path.abspath(os.path.join(os.getcwd(), "experiments", "abc", "output"))
+
+# Copy the directories to the current date and time folder on the fixed external drive
+destination_config_path = os.path.join(current_datetime_folder, "participant_configs")
+destination_output_path = os.path.join(current_datetime_folder, "output")
+
+if not os.path.exists(destination_config_path):
+    shutil.copytree(config_path, destination_config_path)
+
+if not os.path.exists(destination_output_path):
+    shutil.copytree(output_path, destination_output_path)
+
+# Check if the text document with specific content exists on the USB drive
+target_content = "ABC as easy as 123"
+if text_document_with_content_exists(usb_drive, "example.txt", target_content):
+    print(f"Text document with content '{target_content}' found on the USB drive.")
+else:
+    print(f"Text document with content '{target_content}' not found on the USB drive.")
+
+# Rest of your code remains the same
+
+# Create a simple GUI window to display information
+root = tk.Tk()
+root.title("Daten gespeichert")
+
+# Function to update the GUI with information
+def update_gui(text):
+    label = tk.Label(root, text=text, wraplength=300)
+    label.pack()
+
+# Display information about the saved data on the GUI
+usb_datetime_folder = os.path.join(usb_drive, f"AATsave_{current_datetime}")
+
+# Check if directories exist on the USB drive, and if not, create and copy them
+usb_destination_config_path = os.path.join(usb_datetime_folder, "participant_configs")
+usb_destination_output_path = os.path.join(usb_datetime_folder, "output")
+
+if not os.path.exists(usb_datetime_folder):
+    os.makedirs(usb_datetime_folder)
+
+if not os.path.exists(usb_destination_config_path):
+    shutil.copytree(config_path, usb_destination_config_path)
+
+if not os.path.exists(usb_destination_output_path):
+    shutil.copytree(output_path, usb_destination_output_path)
+
+update_gui(f"Daten auf externer Festplatte und USB-Laufwerk '{usb_drive_name}' gespeichert")
+
+root.mainloop()

@@ -1,0 +1,42 @@
+def select_images(self, text: dict, category: str):
+    #Runs through the image selection procedure.
+    # Validate
+    if category not in ["alcoholic", "non_alcoholic"]:
+        raise ValueError("category must be either alcoholic or non_alcoholic") # must correspond to folder name
+    # Initialize category dict
+    self.data[category] = {}
+
+    # Minimize window before gui
+    self.minimize_window()
+
+    # Rate subcategories
+    gui_part_title = text["Gui Title"]
+    gui_part_field1 = text["Gui Field1"]
+    gui_part_field2 = text["Gui Field2"]
+    gui_part_field3 = text["Gui Field3"]
+    gui_part_options = [""] + text["Gui Options"]
+    
+    while True:
+        selection = {gui_part_field1: gui_part_options,
+                gui_part_field2: gui_part_options,
+                gui_part_field3: gui_part_options}
+        gui.DlgFromDict(dictionary=selection, title=gui_part_title)
+        if "" in selection.values() or len(set(selection.values())) < 3:
+            continue
+        else:
+            break
+    
+    # Maximize window after gui
+    self.maximize_window()
+    # Load image paths according to rating 
+    n_panels = [5, 3, 1]
+    for n, subcategory in zip(n_panels, selection.values()):
+        subcategory_imgs = [img for img in self.img_set_personalization.images[category][subcategory]] 
+        shuffle(subcategory_imgs)
+        subcategory_imgs = subcategory_imgs[0:n*9]
+        selected_images = []
+        for i in range(0, n):
+            current_imgs = subcategory_imgs[i*9:(i+1)*9]
+            selected_images += self.img_grid_selection(current_imgs, text)          
+        self.data[category][f"{subcategory} Selection"] = {str(i+1): img for i, img in enumerate(selected_images)}
+        self.win.flip()
