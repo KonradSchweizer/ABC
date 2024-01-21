@@ -1,2 +1,0 @@
-ID	Condition	Condition_saved	Scenario	CurrentTime	Studypart	Code	TrialType	Delay	Picture	Trialnumber	RT	Stage_number	Stage	Y_coordinate	RespCorrect	Congruency	Session	Consequence
-hioh

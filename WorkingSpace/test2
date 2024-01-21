@@ -1,5 +1,0 @@
-import base64
-
-password = "Pferdemädchen420"
-encoded_password = base64.b64encode(password.encode()).decode()
-print(encoded_password)
