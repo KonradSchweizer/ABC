@@ -524,9 +524,11 @@ class ABCPresession(Presession):
                 question_text_stim = visual.TextStim(self.win, text=f"{instruction_text}", color="white", pos=question_pos, height=0.07, font="Arial")
                 image = visual.ImageStim(self.win, image=f"{image_path}/{questions[question]}", pos=(0, 0))
                 to_draw.append(image)
-                
+            
+            
+            
             else:
-                if question == "Custom":
+                if question == "Custom1": # Custom1 is chosen to remove the custum question from the list if you want it back change it to "Custom"
                         question_text = self.add_own_scenario_consequence(rating_dict)
                         if not question_text.strip():
                             continue
@@ -540,7 +542,7 @@ class ABCPresession(Presession):
                 else:
                     question_text = questions[question]
                 question_text_stim = visual.TextStim(self.win, text=f"{instruction_text}\n{question_text}", color="white", pos=question_pos, height=0.07, font="Arial", wrapWidth= 1.5)
-
+              
             # Draw the screen    
             to_draw += [title, question_text_stim, slider, continue_text]
             timer = core.Clock()
