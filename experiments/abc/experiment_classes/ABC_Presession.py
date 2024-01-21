@@ -1133,17 +1133,19 @@ class ABCPresession(Presession):
             raise Exception("Could not save general config.")        
         
     def run(self):
-        # Identify the participant
+        
+                
+    # Identify the participant
         self.identify_participant()
         
         self.initialize_window()
-       
+    
         # Instruction screen
         
         self.instruction_screen()
         
         # Rate the scenarios
-           
+        
         self.pre_scenario()
         text = self.language["Presession"]["Scenario Rating"]
         self.rating_screen(text, "Scenario Rating")
@@ -1169,7 +1171,7 @@ class ABCPresession(Presession):
         #imagine Scenario
         self.imagine_scenario_screen()
         # Imagine Consequence
-       
+    
         # Json dump the data
         self.create_config()
         # End screen
