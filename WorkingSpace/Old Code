@@ -1,0 +1,58 @@
+import os
+from psychopy import visual, core
+from random import shuffle, choice
+
+def list_picture_files(initial_directory):
+    picture_files = []
+    for root, dirs, files in os.walk(initial_directory):
+        for file in files:
+            if file.lower().endswith(('.jpg', '.png')):
+                full_path = os.path.join(root, file)
+                picture_files.append(full_path)
+
+    return picture_files
+
+def make_image_grid(picture_files, grid_size):
+    shuffle(picture_files)
+    grid = []
+    for i in range(grid_size[0]):
+        row = []
+        for j in range(grid_size[1]):
+            if len(picture_files) > 0:
+                row.append(choice(picture_files))
+        grid.append(row)
+
+    return grid
+
+def image_selection():
+    # Window dimensions
+    window_width = 1600
+    window_height = 900
+
+    win = visual.Window([window_width, window_height], color="black", fullscr=False, allowGUI=True)
+    directory = 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic'
+    files = list_picture_files(directory)
+
+    # Grid dimensions
+    rows, cols = 3, 5
+    image_grid = make_image_grid(files, [rows, cols])
+
+    # Image display parameters
+    image_width = window_width / cols
+    image_height = window_height / rows
+    positions = [(x * image_width - window_width / 2 + image_width / 2, y * image_height - window_height / 2 + image_height / 2) 
+                 for y in range(rows) for x in range(cols)]
+
+    images = []
+    for img_path, pos in zip(image_grid, positions):
+        img = visual.ImageStim(win, image=img_path, pos=pos, size=(image_width, image_height))
+        images.append(img)
+
+    for img in images:
+        img.draw()
+
+    win.flip()
+    core.wait(5)  # Display images for 5 seconds
+    win.close()
+
+image_selection()

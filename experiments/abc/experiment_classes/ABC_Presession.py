@@ -1051,6 +1051,7 @@ class ABCPresession(Presession):
         
         for panels, subcategory in zip(panel_counts, selection.values()):
             unseen_imgs = self.img_set_personalization.images[category][subcategory].copy()
+            print(unseen_imgs)
             selected_images = []
             completed_panels = 0
             shuffle(unseen_imgs)
@@ -1143,7 +1144,7 @@ class ABCPresession(Presession):
         self.initialize_window()
     
         # Instruction screen
-        
+        """
         self.instruction_screen()
         
         # Rate the scenarios
@@ -1156,7 +1157,7 @@ class ABCPresession(Presession):
         self.pre_consequence()
         text = self.language["Presession"]["Consequence Rating"]
         self.rating_screen(text, "Consequence Rating")
-        
+        """
         # Select non-alcoholic drinks
         self.pre_nonalc()
         text = self.language["Presession"]["Non-Alcoholic Selection"]

@@ -1,0 +1,143 @@
+import os, random
+from psychopy import gui, visual, event, core
+
+def list_picture_files(initial_directory):
+    picture_files = []
+    for root, dirs, files in os.walk(initial_directory):
+        for file in files:
+            if file.lower().endswith(('.jpg', '.png')):
+                full_path = os.path.join(root, file)
+                picture_files.append(full_path)
+
+    return picture_files
+
+def list_of_lists(picture_files):
+    pictures = picture_files.copy()
+    random.shuffle(pictures)
+    
+    # Splitting the list into smaller lists of 15 pictures each
+    panels = [pictures[i:i + 15] for i in range(0, len(pictures), 15)]
+    
+    return panels
+
+def img_grid_selection(panels):
+    # Ensure that win is defined
+    win = visual.Window([1600, 900], monitor="testMonitor", color="black", fullscr=True, allowGUI=True) #self.win
+
+    # Constants for grid layout
+    rows = 3
+    cols = 5
+    height = 0.6  # Height is used for scaling the image
+
+    # Get a sample image to calculate size ratio
+    stimulus = visual.ImageStim(win, image=panels[0][0])  # Taking the first image of the first panel as a sample
+    size_perc = height / stimulus.size[1]
+    size = (size_perc * stimulus.size[0], size_perc * stimulus.size[1])
+    # Dictionary to track selected images for each panel
+    selected_images = {i: set() for i in range(len(panels))}
+    # Adjust the locations for a 5x3 grid based on the size
+    locs = []
+    for row in range(rows):
+        for col in range(cols):
+            x_pos = (col - 1) * size[0] * 1 -0.2 # Adjust spacing if necessary
+            y_pos = (2 - row) * size[1] * 1 -0.7  # Adjust spacing if necessary
+            locs.append((x_pos, y_pos))
+
+
+    # Define clickable numbers for panel selection
+    panel_selectors = []
+    selector_boxes = []  # Rectangles for clickable areas
+    
+    for i in range(len(panels)):
+        num_stimulus = visual.TextStim(win, text=str(i+1), pos=(i*0.1-0.4, 0.9), height=0.1, color='white')
+        panel_selectors.append(num_stimulus)
+        # Create a larger clickable area for each number
+        selector_box = visual.Rect(win, width=0.15, height=0.15, pos=num_stimulus.pos, lineColor=None, fillColor=None)
+        selector_boxes.append(selector_box)
+
+    # Function to draw a specific panel
+    def draw_panel(panel_index):
+        stimuli = []
+        for i, (loc, img) in enumerate(zip(locs, panels[panel_index])):
+            opacity = 0.5 if i in selected_images[panel_index] else 1
+            stimulus = visual.ImageStim(win, image=img, pos=loc, size=size, opacity=opacity)
+            stimuli.append((stimulus, i))
+        
+        # Drawing the images and handling clicks
+        for stimulus, index in stimuli:
+            stimulus.draw()
+            if mouse.isPressedIn(stimulus):
+                if index in selected_images[panel_index]:
+                    selected_images[panel_index].remove(index)
+                else:
+                    selected_images[panel_index].add(index)
+
+        return stimuli
+
+    # Main loop for panel selection and display
+    current_panel = 0
+    mouse = event.Mouse(win=win)
+    # Initialize a set to keep track of visited panels
+    visited_panels = set()
+
+    while True:
+        win.flip()
+        draw_panel(current_panel)
+        stimuli = draw_panel(current_panel)
+        # Update visited panels
+        visited_panels.add(current_panel)
+
+        # Draw panel selectors and their clickable areas
+        for i, (selector, selector_box) in enumerate(zip(panel_selectors, selector_boxes)):
+            if i == current_panel:
+                selector.color = 'blue'  # Current panel number is blue
+            elif i in visited_panels:
+                selector.color = 'white'  # Visited but not current panel is white
+            else:
+                selector.color = 'grey'  # Unvisited panel is grey
+            selector.draw()
+            selector_box.draw()  # Draw the clickable area (transparent)
+        
+            # Check for mouse click on panel selectors
+        if mouse.getPressed()[0] == 1:
+            for i, selector_box in enumerate(selector_boxes):
+                if selector_box.contains(mouse):
+                    current_panel = i
+                break
+                
+        # Check for arrow key presses
+        keys = event.getKeys()
+        for key in keys:
+            if key == 'left':
+                current_panel -= 1
+                if current_panel < 0:
+                    current_panel = len(panels) - 1
+            elif key == 'right':
+                current_panel += 1
+                if current_panel >= len(panels):
+                    current_panel = 0
+        # Draw the counter for selected images
+        total_selected = sum(len(v) for v in selected_images.values())
+        counter_stimulus = visual.TextStim(win, text=f"Selected: {total_selected}", pos=(0.8, 0.9), height=0.1, color='white')
+        counter_stimulus.draw()
+
+        # Check if all panels have been visited
+        if len(visited_panels) == len(panels):
+            print("All panels have been visited at least once.")
+            # Clear events
+            event.clearEvents()
+
+
+
+def image_selection():
+    win = visual.Window([1600, 900], monitor="testMonitor", color="black", fullscr=True, allowGUI=True) #self.win
+    directory = 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic'
+    files = list_picture_files(directory)
+    panels = list_of_lists(files)
+    img_grid_selection(panels)
+   
+   
+   
+
+image_selection()
+
