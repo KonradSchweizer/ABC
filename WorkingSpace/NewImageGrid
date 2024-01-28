@@ -1,5 +1,11 @@
 import os, random
 from psychopy import gui, visual, event, core
+import warnings
+import time
+
+# Suppress specific FutureWarnings from PsychoPy
+warnings.filterwarnings('ignore', category=FutureWarning, module='psychopy.visual.shape')
+
 
 def list_picture_files(initial_directory):
     picture_files = []
@@ -12,129 +18,288 @@ def list_picture_files(initial_directory):
     return picture_files
 
 def list_of_lists(picture_files):
-    pictures = picture_files.copy()
-    random.shuffle(pictures)
+    pictures = picture_files.copy()                          
+    #random.shuffle(pictures) #Random or not
     
     # Splitting the list into smaller lists of 15 pictures each
     panels = [pictures[i:i + 15] for i in range(0, len(pictures), 15)]
     
     return panels
 
-def img_grid_selection(panels):
-    # Ensure that win is defined
-    win = visual.Window([1600, 900], monitor="testMonitor", color="black", fullscr=True, allowGUI=True) #self.win
-
+def img_grid_selection(panels, win):
     # Constants for grid layout
-    rows = 3
-    cols = 5
+    rows, cols = 3, 5
     height = 0.6  # Height is used for scaling the image
 
+    # Debounce settings
+    debounce_time = 0.2  # Time in seconds to debounce mouse clicks
+    last_click_time = 0 # Timestamp of the last registered click
+
     # Get a sample image to calculate size ratio
-    stimulus = visual.ImageStim(win, image=panels[0][0])  # Taking the first image of the first panel as a sample
-    size_perc = height / stimulus.size[1]
-    size = (size_perc * stimulus.size[0], size_perc * stimulus.size[1])
+    sample_stimulus = visual.ImageStim(win, image=panels[0][0])
+    size_perc = height / sample_stimulus.size[1]
+    size = (size_perc * sample_stimulus.size[0], size_perc * sample_stimulus.size[1])
+
+    # Preload images
+    preloaded_images = [[visual.ImageStim(win, image=img, size=size) for img in panel] for panel in panels]
+
     # Dictionary to track selected images for each panel
     selected_images = {i: set() for i in range(len(panels))}
+
     # Adjust the locations for a 5x3 grid based on the size
     locs = []
     for row in range(rows):
         for col in range(cols):
-            x_pos = (col - 1) * size[0] * 1 -0.2 # Adjust spacing if necessary
-            y_pos = (2 - row) * size[1] * 1 -0.7  # Adjust spacing if necessary
+            x_pos = (col + 1) * size[0] * 1.01 - 0.1  # Move to the right
+            y_pos = (2 - row) * size[1] * 1.01 - 0.7  # Move down
             locs.append((x_pos, y_pos))
 
-
     # Define clickable numbers for panel selection
-    panel_selectors = []
-    selector_boxes = []  # Rectangles for clickable areas
-    
-    for i in range(len(panels)):
-        num_stimulus = visual.TextStim(win, text=str(i+1), pos=(i*0.1-0.4, 0.9), height=0.1, color='white')
-        panel_selectors.append(num_stimulus)
-        # Create a larger clickable area for each number
-        selector_box = visual.Rect(win, width=0.15, height=0.15, pos=num_stimulus.pos, lineColor=None, fillColor=None)
-        selector_boxes.append(selector_box)
+    panel_selectors = [visual.TextStim(win, text=str(i + 1), pos=(i * 0.1 + 0.1, 0.9), height=0.1, color='white') for i in range(len(panels))]
+    selector_boxes = [visual.Rect(win, width=0.09, height=0.19, pos=selector.pos, lineColor=None, fillColor=None) for selector in panel_selectors]
+    # New: Text stimuli for selected image counts
+    selected_count_texts = [visual.TextStim(win, text="", pos=(selector.pos[0] + 0.02, selector.pos[1] - 0.07), height=0.05, color='green') for selector in panel_selectors]
 
     # Function to draw a specific panel
-    def draw_panel(panel_index):
-        stimuli = []
-        for i, (loc, img) in enumerate(zip(locs, panels[panel_index])):
-            opacity = 0.5 if i in selected_images[panel_index] else 1
-            stimulus = visual.ImageStim(win, image=img, pos=loc, size=size, opacity=opacity)
-            stimuli.append((stimulus, i))
-        
-        # Drawing the images and handling clicks
-        for stimulus, index in stimuli:
-            stimulus.draw()
-            if mouse.isPressedIn(stimulus):
-                if index in selected_images[panel_index]:
-                    selected_images[panel_index].remove(index)
+# Function to draw a specific panel
+    def draw_panel(panel_index, panel_changed, new_pictures_indices):
+        if panel_changed:
+            for i, img_stim in enumerate(preloaded_images[panel_index]):
+                # Determine the opacity based on selection type
+                if i in selected_images[panel_index]:
+                    if i in new_pictures_indices:
+                        # AI-selected picture
+                        
+                        img_stim.opacity = 0.5
+                    else:
+                        # Manually selected picture
+                        img_stim.opacity = 0.7
                 else:
-                    selected_images[panel_index].add(index)
+                    # Not selected picture
+                    img_stim.opacity = 1
 
-        return stimuli
+                # Set position and draw
+                img_stim.pos = locs[i]
+
+            for img_stim in preloaded_images[panel_index]:
+                img_stim.draw()
 
     # Main loop for panel selection and display
-    current_panel = 0
+    current_panel, last_panel = 0, -1
     mouse = event.Mouse(win=win)
-    # Initialize a set to keep track of visited panels
     visited_panels = set()
 
+    # Draw static elements outside the loop
+    forward = visual.Rect(win, width=0.2, height=0.1, pos=(-0.2, -0.75), fillColor="grey", lineColor="blue", lineWidth=1)
+    forward_text = visual.TextStim(win, text="Vorwärts", pos=(-0.2, -0.75), color='white', height=0.05)
+
+    backward = visual.Rect(win, width=0.2, height=0.1, pos=(-0.8, -0.75), fillColor="grey", lineColor="blue", lineWidth=1)
+    backward_text = visual.TextStim(win, text="Zurück", pos=(-0.8, -0.75), color='white', height=0.05)
+
+    instructions = visual.TextStim(win, text="Wählen Sie zwischen 20 und 45 Bilder nachdem aus, was Sie früher besonders häufig getrunken haben.\n\n1x Klicken wählt ein Getränk aus.\n\nErneut 1x Klicken auf ein ausgewähltes Getränk hebt die Auswahl auf.",
+                                   pos=(-0.5, 0.7), font="Arial", height=0.05, wrapWidth=0.8, color='white', alignText='left')
+    
+    ai_replace_used = False
+    if not ai_replace_used:
+        new_pictures_indices = set()
+        
     while True:
         win.flip()
-        draw_panel(current_panel)
-        stimuli = draw_panel(current_panel)
+        panel_changed = current_panel != last_panel
+        if panel_changed:
+            draw_panel(current_panel, panel_changed, new_pictures_indices)
+        last_panel = current_panel
+        for img_stim in preloaded_images[current_panel]:
+            img_stim.draw()
         # Update visited panels
         visited_panels.add(current_panel)
 
-        # Draw panel selectors and their clickable areas
-        for i, (selector, selector_box) in enumerate(zip(panel_selectors, selector_boxes)):
-            if i == current_panel:
-                selector.color = 'blue'  # Current panel number is blue
-            elif i in visited_panels:
-                selector.color = 'white'  # Visited but not current panel is white
-            else:
-                selector.color = 'grey'  # Unvisited panel is grey
+        # Draw and handle panel selectors
+        for i, (selector, selector_box, count_text) in enumerate(zip(panel_selectors, selector_boxes, selected_count_texts)):
+            # Update only if necessary
+            if panel_changed or i == current_panel or i in visited_panels:
+                selector.color = 'black' if i == current_panel else 'white' if i in visited_panels else 'red'
+                selector_box.lineColor = 'white' if i == current_panel else None
+                selector_box.fillColor = 'white' if i == current_panel else None
+
+            selector_box.draw()
             selector.draw()
-            selector_box.draw()  # Draw the clickable area (transparent)
+
+            # Update count text only if necessary
+            if len(selected_images[i]) > 0:
+                count_text.text = str(len(selected_images[i]))
+                count_text.draw()
         
-            # Check for mouse click on panel selectors
-        if mouse.getPressed()[0] == 1:
-            for i, selector_box in enumerate(selector_boxes):
-                if selector_box.contains(mouse):
-                    current_panel = i
+            # Debounce mechanism for panel selection
+            if time.time() - last_click_time > debounce_time and mouse.isPressedIn(selector_box):
+                current_panel = i
+                last_click_time = time.time()
                 break
-                
-        # Check for arrow key presses
+
+        # Draw navigation buttons
+        forward.draw()
+        forward_text.draw()
+        backward.draw()
+        backward_text.draw()    
+        
+        #Draw instructions
+        instructions.draw()
+
+        # Handle key presses for panel navigation
         keys = event.getKeys()
-        for key in keys:
-            if key == 'left':
-                current_panel -= 1
-                if current_panel < 0:
-                    current_panel = len(panels) - 1
-            elif key == 'right':
-                current_panel += 1
-                if current_panel >= len(panels):
-                    current_panel = 0
+        if 'left' in keys or mouse.isPressedIn(backward):
+            current_panel = (current_panel - 1) % len(panels)
+            core.wait(0.2)
+        elif 'right' in keys or mouse.isPressedIn(forward):
+            current_panel = (current_panel + 1) % len(panels)
+            core.wait(0.2)
+            
         # Draw the counter for selected images
         total_selected = sum(len(v) for v in selected_images.values())
-        counter_stimulus = visual.TextStim(win, text=f"Selected: {total_selected}", pos=(0.8, 0.9), height=0.1, color='white')
+        counter_stimulus = visual.TextStim(win, text=f"Ausgewählt: {total_selected}/45", pos=(-0.5, 0.25), height=0.1, color='red' if total_selected < 20 or total_selected > 45 else 'Green')
         counter_stimulus.draw()
 
-        # Check if all panels have been visited
-        if len(visited_panels) == len(panels):
-            print("All panels have been visited at least once.")
-            # Clear events
-            event.clearEvents()
+        # Check for image selection with debounce
+        if mouse.getPressed()[0] == 1:
+            if time.time() - last_click_time > debounce_time:
+                for i, img_stim in enumerate(preloaded_images[current_panel]):
+                    if mouse.isPressedIn(img_stim):
+                        selected_images[current_panel].symmetric_difference_update([i])
+                        img_stim.opacity = 0.5 if i in selected_images[current_panel] else 1
+                        last_click_time = time.time()
+                        break
+            while True:
+                    if mouse.getPressed()[0] == 0:
+                        break
+        # Update reminder text
+        unseen_panels = len(panels) - len(visited_panels)
+        if len(visited_panels) < len(panels):
+            text = f"Gucken Sie sich bitte die verbleibenden {unseen_panels} Seiten an"
+            if total_selected > 45:
+                text += " und entfernen Sie Bilder, bis Sie 45 Bilder ausgewählt haben"
+        elif total_selected > 45:
+            text = "Sie haben zu viele Bilder ausgewählt. Bitte entfernen Sie Bilder, bis Sie 45 Bilder ausgewählt haben"
+        else:
+            text = ""
+
+        Reminder = visual.TextStim(win, text=text, pos=(-0.5, 0), height=0.07, wrapWidth=0.8, color='red', alignText='left')
+        Reminder.draw()
+
+        # Continue button
+        if total_selected == 45 and len(visited_panels) == len(panels):
+            continuebtn = visual.ButtonStim(win, text="Fortfahren", pos=(-0.5, -0.25), color='white', fillColor="blue", borderColor=None, size=(0.4, 0.1))
+            continuebtn.draw()
+            if mouse.isPressedIn(continuebtn):
+                selected_image_paths = {panel_idx: [panels[panel_idx][img_idx] for img_idx in img_indices]
+                                        for panel_idx, img_indices in selected_images.items()}
+                return selected_image_paths
+
+        # AI Replace button
+        
+        if total_selected >= 20 and not len(visited_panels) < len(panels) and total_selected < 45 and not ai_replace_used:
+            new_pictures_indices = set()
+            picsLeft = 45 - total_selected
+            AIREPLACE = visual.ButtonStim(win, text=f"Übrige {picsLeft} Bilder automatisch auswählen!", pos=(-0.5, -0.25), color='white', fillColor="blue", borderColor=None, size=(0.4, 0.1))
+            AIREPLACE.draw()
+            if mouse.isPressedIn(AIREPLACE):
+                ai_replace_used = True
+                selected_image_paths = {panel_idx: [panels[panel_idx][img_idx] for img_idx in img_indices]
+                                        for panel_idx, img_indices in selected_images.items()}
+                new_pictures = AiReplace(selected_image_paths)
+                print(len(new_pictures))
+
+                # Map new pictures to their indices and add to selected_images
+                for pic in new_pictures:
+                    for panel_idx, panel in enumerate(panels):
+                        if pic in panel:
+                            img_idx = panel.index(pic)
+                            selected_images[panel_idx].add(img_idx)
+                            new_pictures_indices.add(img_idx)
+        event.clearEvents(eventType='mouse')  # Clear only mouse events
+
+
+
+def AiReplace(selected_images):
+    
+    replacements = flatten_dictionary(balance_dictionary_to_45(selected_images))
+    return replacements
+
+def count_drink_types(dictionary):
+    beer_sum = 0
+    liquor_sum = 0
+    wine_sum = 0
+
+    for key, values in dictionary.items():
+        if 0 <= key <= 2:  # Keys 0 to 2 are beers
+            beer_sum += len(values)
+        elif 3 <= key <= 5:  # Keys 3 to 5 are liquors
+            liquor_sum += len(values)
+        elif 6 <= key <= 8:  # Keys 6 to 8 are wines
+            wine_sum += len(values)
+
+    return beer_sum, liquor_sum, wine_sum   
+
+def count_and_proportion_drink_types(dictionary):
+    total_count = sum(len(values) for values in dictionary.values())
+    beer_count, liquor_count, wine_count = count_drink_types(dictionary)
+
+    beer_prop = beer_count / total_count if total_count > 0 else 0
+    liquor_prop = liquor_count / total_count if total_count > 0 else 0
+    wine_prop = wine_count / total_count if total_count > 0 else 0
+
+    return beer_count, liquor_count, wine_count, beer_prop, liquor_prop, wine_prop
+
+def pick_additional_pictures(category, number_of_pictures, all_pictures, new_dict):
+    pics = new_dict.copy()  
+    image_directory = 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic'
+    all_pictures = list_picture_files(image_directory)
+    pics = new_dict.copy()  
+    initial_pictures = [item for sublist in pics.values() for item in sublist]
+    available_pictures1 = [pic for pic in all_pictures if pic not in initial_pictures]
+    category_specifiv_pictures = [pic for pic in available_pictures1 if category in str(pic)]
+    # Randomly select the required number of pictures
+    selected_pictures = random.sample(category_specifiv_pictures, min(number_of_pictures, len(category_specifiv_pictures)))
+    return selected_pictures
+
+
+def balance_dictionary_to_45(dictionary):
+    target_total = 45
+    new_dict = dictionary.copy()
+    image_directory = 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic'
+    all_pictures = list_picture_files(image_directory)
+
+    beer_count, liquor_count, wine_count, beer_prop, liquor_prop, wine_prop = count_and_proportion_drink_types(dictionary)
+    print(beer_count, liquor_count, wine_count, beer_prop, liquor_prop, wine_prop)
+    # Calculate additional pictures needed for each category
+    additional_beer = round((target_total * beer_prop) - beer_count)
+    additional_liquor = round((target_total * liquor_prop) - liquor_count)
+    additional_wine = round((target_total * wine_prop) - wine_count)
+
+    # Pick additional pictures for each category
+    if additional_beer > 0:
+        new_dict['beer_additional'] = pick_additional_pictures('Beer', additional_beer, all_pictures, new_dict)
+    if additional_liquor > 0:
+        new_dict['liquor_additional'] = pick_additional_pictures('Liquor', additional_liquor, all_pictures, new_dict)
+    if additional_wine > 0:
+        new_dict['wine_additional'] = pick_additional_pictures('Wine', additional_wine, all_pictures, new_dict)
+
+    return new_dict
+# Usage
+def flatten_dictionary(dictionary):
+    flattened_list = []
+    for key, value_list in dictionary.items():
+        flattened_list.extend(value_list)
+    return flattened_list
 
 
 
 def image_selection():
-    win = visual.Window([1600, 900], monitor="testMonitor", color="black", fullscr=True, allowGUI=True) #self.win
+    win = visual.Window([1600, 900], monitor="testMonitor", color="black", fullscr=True, allowGUI=True)
     directory = 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic'
     files = list_picture_files(directory)
     panels = list_of_lists(files)
-    img_grid_selection(panels)
+    picture = img_grid_selection(panels, win)
+    
    
    
    
