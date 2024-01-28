@@ -27,12 +27,13 @@ def list_of_lists(picture_files):
     return panels
 
 def img_grid_selection(panels, win):
+    ai_replace_used = False
     # Constants for grid layout
     rows, cols = 3, 5
     height = 0.6  # Height is used for scaling the image
 
     # Debounce settings
-    debounce_time = 0.2  # Time in seconds to debounce mouse clicks
+    debounce_time = 0  # Time in seconds to debounce mouse clicks #0.2
     last_click_time = 0 # Timestamp of the last registered click
 
     # Get a sample image to calculate size ratio
@@ -62,27 +63,26 @@ def img_grid_selection(panels, win):
 
     # Function to draw a specific panel
 # Function to draw a specific panel
-    def draw_panel(panel_index, panel_changed, new_pictures_indices):
+    def draw_panel(panel_index, panel_changed):
         if panel_changed:
             for i, img_stim in enumerate(preloaded_images[panel_index]):
-                # Determine the opacity based on selection type
-                if i in selected_images[panel_index]:
-                    if i in new_pictures_indices:
-                        # AI-selected picture
-                        
-                        img_stim.opacity = 0.5
-                    else:
-                        # Manually selected picture
-                        img_stim.opacity = 0.7
+                is_selected = i in selected_images[panel_index]
+                is_ai_selected = ai_replace_used and i in new_pictures_indices[panel_index]
+
+                # Debug print
+                
+
+                if is_selected and is_ai_selected:
+                    img_stim.opacity = 0.75  # Manually and AI-selected
+                elif is_selected and not is_ai_selected:
+                    img_stim.opacity = 0.5  # Manually selected
+
                 else:
-                    # Not selected picture
-                    img_stim.opacity = 1
+                    img_stim.opacity = 1  # Not selected
 
-                # Set position and draw
                 img_stim.pos = locs[i]
-
-            for img_stim in preloaded_images[panel_index]:
                 img_stim.draw()
+
 
     # Main loop for panel selection and display
     current_panel, last_panel = 0, -1
@@ -99,15 +99,16 @@ def img_grid_selection(panels, win):
     instructions = visual.TextStim(win, text="Wählen Sie zwischen 20 und 45 Bilder nachdem aus, was Sie früher besonders häufig getrunken haben.\n\n1x Klicken wählt ein Getränk aus.\n\nErneut 1x Klicken auf ein ausgewähltes Getränk hebt die Auswahl auf.",
                                    pos=(-0.5, 0.7), font="Arial", height=0.05, wrapWidth=0.8, color='white', alignText='left')
     
-    ai_replace_used = False
+    
     if not ai_replace_used:
         new_pictures_indices = set()
+
         
     while True:
         win.flip()
         panel_changed = current_panel != last_panel
         if panel_changed:
-            draw_panel(current_panel, panel_changed, new_pictures_indices)
+            draw_panel(current_panel, panel_changed)
         last_panel = current_panel
         for img_stim in preloaded_images[current_panel]:
             img_stim.draw()
@@ -205,24 +206,34 @@ def img_grid_selection(panels, win):
                 ai_replace_used = True
                 selected_image_paths = {panel_idx: [panels[panel_idx][img_idx] for img_idx in img_indices]
                                         for panel_idx, img_indices in selected_images.items()}
-                new_pictures = AiReplace(selected_image_paths)
-                print(len(new_pictures))
+                selected_image_save = selected_images.copy()
 
-                # Map new pictures to their indices and add to selected_images
+                # Get the new pictures selected by the AI
+                new_pictures = AiReplace(selected_image_paths)
+
+                # Initialize new_pictures_indices as a dictionary
+                new_pictures_indices = {panel_idx: set() for panel_idx in range(len(panels))}
+
+                # Iterate over new pictures from AI and update selected_images
+                # and new_pictures_indices
                 for pic in new_pictures:
                     for panel_idx, panel in enumerate(panels):
                         if pic in panel:
                             img_idx = panel.index(pic)
+                            # Add new AI-selected picture to the selected images
                             selected_images[panel_idx].add(img_idx)
-                            new_pictures_indices.add(img_idx)
+                            # Add the index to new_pictures_indices for the specific panel
+                            new_pictures_indices[panel_idx].add(img_idx)
+
+                
         event.clearEvents(eventType='mouse')  # Clear only mouse events
 
 
 
 def AiReplace(selected_images):
-    
-    replacements = flatten_dictionary(balance_dictionary_to_45(selected_images))
-    return replacements
+    new_ai_images = balance_dictionary_to_45(selected_images)
+    print(new_ai_images)
+    return new_ai_images
 
 def count_drink_types(dictionary):
     beer_sum = 0
@@ -269,21 +280,22 @@ def balance_dictionary_to_45(dictionary):
     all_pictures = list_picture_files(image_directory)
 
     beer_count, liquor_count, wine_count, beer_prop, liquor_prop, wine_prop = count_and_proportion_drink_types(dictionary)
-    print(beer_count, liquor_count, wine_count, beer_prop, liquor_prop, wine_prop)
-    # Calculate additional pictures needed for each category
+
     additional_beer = round((target_total * beer_prop) - beer_count)
     additional_liquor = round((target_total * liquor_prop) - liquor_count)
     additional_wine = round((target_total * wine_prop) - wine_count)
 
-    # Pick additional pictures for each category
-    if additional_beer > 0:
-        new_dict['beer_additional'] = pick_additional_pictures('Beer', additional_beer, all_pictures, new_dict)
-    if additional_liquor > 0:
-        new_dict['liquor_additional'] = pick_additional_pictures('Liquor', additional_liquor, all_pictures, new_dict)
-    if additional_wine > 0:
-        new_dict['wine_additional'] = pick_additional_pictures('Wine', additional_wine, all_pictures, new_dict)
+    ai_selected_images = []  # Store the new images selected by AI
 
-    return new_dict
+    if additional_beer > 0:
+        ai_selected_images.extend(pick_additional_pictures('Beer', additional_beer, all_pictures, new_dict))
+    if additional_liquor > 0:
+        ai_selected_images.extend(pick_additional_pictures('Liquor', additional_liquor, all_pictures, new_dict))
+    if additional_wine > 0:
+        ai_selected_images.extend(pick_additional_pictures('Wine', additional_wine, all_pictures, new_dict))
+
+    return ai_selected_images
+
 # Usage
 def flatten_dictionary(dictionary):
     flattened_list = []
