@@ -184,7 +184,7 @@ def img_grid_selection(panels, win):
             
         # Draw the counter for selected images
         total_selected = sum(len(v) for v in selected_images.values())
-        counter_stimulus = visual.TextStim(win, text=f"Ausgewählt: {total_selected}/45", pos=(-0.5, 0.25), height=0.1, color='red' if total_selected < 20 or total_selected > 45 else 'Green')
+        counter_stimulus = visual.TextStim(win, text=f"Ausgewählt: {total_selected}/45", pos=(-0.5, 0.25), height=0.1, color='red' if total_selected < 20 or total_selected > 45 or total_selected < 45 and ai_replace_used else  'Green')
         counter_stimulus.draw()
 
 
@@ -213,6 +213,8 @@ def img_grid_selection(panels, win):
                 text += " und entfernen Sie Bilder, bis Sie 45 Bilder ausgewählt haben"
         elif total_selected > 45:
             text = "Sie haben zu viele Bilder ausgewählt. Bitte entfernen Sie Bilder, bis Sie 45 Bilder ausgewählt haben"
+        elif total_selected < 45 and ai_replace_used:
+            text = "Bitte wählen Sie noch Bilder aus, bis Sie 45 Bilder ausgewählt haben"
         else:
             text = ""
 
@@ -233,7 +235,7 @@ def img_grid_selection(panels, win):
         if total_selected >= 20 and not len(visited_panels) < len(panels) and total_selected < 45 and not ai_replace_used:
             
             picsLeft = 45 - total_selected
-            AIREPLACE = visual.ButtonStim(win, text=f"Übrige {picsLeft} Bilder automatisch auswählen!", pos=(-0.5, -0.25), color='white', fillColor="blue", borderColor=None, size=(0.4, 0.1), font="Arial")
+            AIREPLACE = visual.ButtonStim(win, text=f"{picsLeft} Bilder automatisch auswählen ", pos=(-0.5, -0.25), color='white', fillColor="blue", borderColor=None, size=(0.4, 0.1), font="Arial")
             AIREPLACE.draw()
             if mouse.isPressedIn(AIREPLACE):
                 ai_replace_used = True
@@ -325,6 +327,7 @@ def balance_dictionary_to_45(dictionary):
         ai_selected_images.extend(pick_additional_pictures('Liquor', additional_liquor, all_pictures, new_dict))
     if additional_wine > 0:
         ai_selected_images.extend(pick_additional_pictures('Wine', additional_wine, all_pictures, new_dict))
+
     if len(ai_selected_images) > 25:
         print("ALARM: AI selected more than 25 images")
         random.shuffle(ai_selected_images)
