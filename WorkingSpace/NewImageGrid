@@ -43,7 +43,9 @@ def img_grid_selection(panels, win):
 
     # Preload images
     preloaded_images = [[visual.ImageStim(win, image=img, size=size) for img in panel] for panel in panels]
-
+    
+    # Initialize frames based on preloaded_images
+    preloaded_frames = [[visual.Rect(win, width=image_stim.size[0], height=image_stim.size[1], pos=(0,0), lineColor='blue', fillColor=None, lineWidth=4) for image_stim in panel] for panel in preloaded_images]
     # Dictionary to track selected images for each panel
     selected_images = {i: set() for i in range(len(panels))}
 
@@ -57,32 +59,32 @@ def img_grid_selection(panels, win):
 
     # Define clickable numbers for panel selection
     panel_selectors = [visual.TextStim(win, text=str(i + 1), pos=(i * 0.1 + 0.1, 0.9), height=0.1, color='white') for i in range(len(panels))]
-    selector_boxes = [visual.Rect(win, width=0.09, height=0.19, pos=selector.pos, lineColor=None, fillColor=None) for selector in panel_selectors]
+    selector_boxes = [visual.Rect(win, width=0.09, height=0.178 , pos=selector.pos, lineColor=None, fillColor=None) for selector in panel_selectors]
     # New: Text stimuli for selected image counts
-    selected_count_texts = [visual.TextStim(win, text="", pos=(selector.pos[0] + 0.02, selector.pos[1] - 0.07), height=0.05, color='green') for selector in panel_selectors]
+    selected_count_texts = [visual.TextStim(win, text="", pos=(selector.pos[0] - 0.02, selector.pos[1] - 0.07), height=0.05, color='green') for selector in panel_selectors]
+    ai_selected_count_texts = [visual.TextStim(win, text="", pos=(selector.pos[0] + 0.01, selector.pos[1] - 0.07), height=0.05, color='red') for selector in panel_selectors]
+
 
     # Function to draw a specific panel
 # Function to draw a specific panel
     def draw_panel(panel_index, panel_changed):
         if panel_changed:
-            for i, img_stim in enumerate(preloaded_images[panel_index]):
+            for i, (img_stim, frame_stim) in enumerate(zip(preloaded_images[panel_index], preloaded_frames[panel_index])):
                 is_selected = i in selected_images[panel_index]
                 is_ai_selected = ai_replace_used and i in new_pictures_indices[panel_index]
 
-                # Debug print
-                
-
                 if is_selected and is_ai_selected:
-                    img_stim.opacity = 0.75  # Manually and AI-selected
-                elif is_selected and not is_ai_selected:
-                    img_stim.opacity = 0.5  # Manually selected
+                    img_stim.opacity = 0.8
+                    frame_stim.pos = locs[i]  # Set frame position
+                    frame_stim.draw()  # Draw frame for selected images
 
+                elif is_selected and not is_ai_selected:
+                    img_stim.opacity = 0.5
                 else:
-                    img_stim.opacity = 1  # Not selected
+                    img_stim.opacity = 1
 
                 img_stim.pos = locs[i]
                 img_stim.draw()
-
 
     # Main loop for panel selection and display
     current_panel, last_panel = 0, -1
@@ -91,18 +93,21 @@ def img_grid_selection(panels, win):
 
     # Draw static elements outside the loop
     forward = visual.Rect(win, width=0.2, height=0.1, pos=(-0.2, -0.75), fillColor="grey", lineColor="blue", lineWidth=1)
-    forward_text = visual.TextStim(win, text="Vorwärts", pos=(-0.2, -0.75), color='white', height=0.05)
+    forward_text = visual.TextStim(win, text="Vorwärts", pos=(-0.2, -0.75), color='white', height=0.05,font="Arial")
 
     backward = visual.Rect(win, width=0.2, height=0.1, pos=(-0.8, -0.75), fillColor="grey", lineColor="blue", lineWidth=1)
-    backward_text = visual.TextStim(win, text="Zurück", pos=(-0.8, -0.75), color='white', height=0.05)
+    backward_text = visual.TextStim(win, text="Zurück", pos=(-0.8, -0.75), color='white', height=0.05,font="Arial")
 
-    instructions = visual.TextStim(win, text="Wählen Sie zwischen 20 und 45 Bilder nachdem aus, was Sie früher besonders häufig getrunken haben.\n\n1x Klicken wählt ein Getränk aus.\n\nErneut 1x Klicken auf ein ausgewähltes Getränk hebt die Auswahl auf.",
-                                   pos=(-0.5, 0.7), font="Arial", height=0.05, wrapWidth=0.8, color='white', alignText='left')
+    instructions = visual.TextStim(win, text="Wählen Sie zwischen 20 und 45 Bilder nachdem aus, was Sie früher besonders häufig getrunken haben.\n\nKlicken Sie einmal, um ein Getränk auszuwählen.\n\nErneutes Klicken hebt die Auswahl auf.",
+                                   pos=(-0.5, 0.65), font="Arial", height=0.06, wrapWidth=0.8, color='white', alignText='left')
     
     
-    if not ai_replace_used:
-        new_pictures_indices = set()
+    new_pictures_indices = {panel_idx: set() for panel_idx in range(len(panels))}
 
+
+
+        
+        
         
     while True:
         win.flip()
@@ -110,27 +115,50 @@ def img_grid_selection(panels, win):
         if panel_changed:
             draw_panel(current_panel, panel_changed)
         last_panel = current_panel
+        
         for img_stim in preloaded_images[current_panel]:
             img_stim.draw()
+            
+    # Drawing frames conditionally
+        if ai_replace_used:
+            for i, frame_stim in enumerate(preloaded_frames[current_panel]):
+                # Check if the frame should be drawn for the current image
+                if (i in selected_images[current_panel] and not ai_replace_used) or (ai_replace_used and i in new_pictures_indices[current_panel]):
+                    frame_stim.draw()
+                else:
+                    # If the frame should not be drawn, ensure it's not drawn
+                    # This might involve setting visibility to False or not calling frame_stim.draw()
+                    pass
+                
         # Update visited panels
         visited_panels.add(current_panel)
 
         # Draw and handle panel selectors
-        for i, (selector, selector_box, count_text) in enumerate(zip(panel_selectors, selector_boxes, selected_count_texts)):
-            # Update only if necessary
+        for i, (selector, selector_box, count_text, ai_count_text) in enumerate(zip(panel_selectors, selector_boxes, selected_count_texts, ai_selected_count_texts)):
             if panel_changed or i == current_panel or i in visited_panels:
                 selector.color = 'black' if i == current_panel else 'white' if i in visited_panels else 'red'
                 selector_box.lineColor = 'white' if i == current_panel else None
                 selector_box.fillColor = 'white' if i == current_panel else None
+                
 
             selector_box.draw()
             selector.draw()
 
             # Update count text only if necessary
-            if len(selected_images[i]) > 0:
-                count_text.text = str(len(selected_images[i]))
+            self_selected_count = len(selected_images[i]) - len(new_pictures_indices[i])
+            ai_selected_count = len(new_pictures_indices[i])
+
+            if self_selected_count > 0 or ai_selected_count > 0:
+                count_text.text = str(self_selected_count)
+                count_text.color = 'green'
                 count_text.draw()
-        
+
+            if ai_selected_count > 0:
+                ai_count_text.text = f"+{ai_selected_count}"
+                ai_count_text.color = 'blue'
+                ai_count_text.draw()
+                
+                
             # Debounce mechanism for panel selection
             if time.time() - last_click_time > debounce_time and mouse.isPressedIn(selector_box):
                 current_panel = i
@@ -145,7 +173,6 @@ def img_grid_selection(panels, win):
         
         #Draw instructions
         instructions.draw()
-
         # Handle key presses for panel navigation
         keys = event.getKeys()
         if 'left' in keys or mouse.isPressedIn(backward):
@@ -160,18 +187,24 @@ def img_grid_selection(panels, win):
         counter_stimulus = visual.TextStim(win, text=f"Ausgewählt: {total_selected}/45", pos=(-0.5, 0.25), height=0.1, color='red' if total_selected < 20 or total_selected > 45 else 'Green')
         counter_stimulus.draw()
 
-        # Check for image selection with debounce
+
+    # Check for image selection with debounce
         if mouse.getPressed()[0] == 1:
             if time.time() - last_click_time > debounce_time:
                 for i, img_stim in enumerate(preloaded_images[current_panel]):
                     if mouse.isPressedIn(img_stim):
                         selected_images[current_panel].symmetric_difference_update([i])
                         img_stim.opacity = 0.5 if i in selected_images[current_panel] else 1
+                        if i in new_pictures_indices[current_panel]:
+                                new_pictures_indices[current_panel].remove(i)
+                                img_stim.opacity = 1
                         last_click_time = time.time()
                         break
             while True:
                     if mouse.getPressed()[0] == 0:
                         break
+
+
         # Update reminder text
         unseen_panels = len(panels) - len(visited_panels)
         if len(visited_panels) < len(panels):
@@ -188,7 +221,7 @@ def img_grid_selection(panels, win):
 
         # Continue button
         if total_selected == 45 and len(visited_panels) == len(panels):
-            continuebtn = visual.ButtonStim(win, text="Fortfahren", pos=(-0.5, -0.25), color='white', fillColor="blue", borderColor=None, size=(0.4, 0.1))
+            continuebtn = visual.ButtonStim(win, text="Fortfahren", pos=(-0.5, -0.35), color='white', fillColor="blue", borderColor=None, size=(0.4, 0.1),font="Arial")
             continuebtn.draw()
             if mouse.isPressedIn(continuebtn):
                 selected_image_paths = {panel_idx: [panels[panel_idx][img_idx] for img_idx in img_indices]
@@ -198,9 +231,9 @@ def img_grid_selection(panels, win):
         # AI Replace button
         
         if total_selected >= 20 and not len(visited_panels) < len(panels) and total_selected < 45 and not ai_replace_used:
-            new_pictures_indices = set()
+            
             picsLeft = 45 - total_selected
-            AIREPLACE = visual.ButtonStim(win, text=f"Übrige {picsLeft} Bilder automatisch auswählen!", pos=(-0.5, -0.25), color='white', fillColor="blue", borderColor=None, size=(0.4, 0.1))
+            AIREPLACE = visual.ButtonStim(win, text=f"Übrige {picsLeft} Bilder automatisch auswählen!", pos=(-0.5, -0.25), color='white', fillColor="blue", borderColor=None, size=(0.4, 0.1), font="Arial")
             AIREPLACE.draw()
             if mouse.isPressedIn(AIREPLACE):
                 ai_replace_used = True
@@ -213,26 +246,25 @@ def img_grid_selection(panels, win):
 
                 # Initialize new_pictures_indices as a dictionary
                 new_pictures_indices = {panel_idx: set() for panel_idx in range(len(panels))}
-
-                # Iterate over new pictures from AI and update selected_images
-                # and new_pictures_indices
                 for pic in new_pictures:
                     for panel_idx, panel in enumerate(panels):
                         if pic in panel:
                             img_idx = panel.index(pic)
-                            # Add new AI-selected picture to the selected images
                             selected_images[panel_idx].add(img_idx)
-                            # Add the index to new_pictures_indices for the specific panel
                             new_pictures_indices[panel_idx].add(img_idx)
-
-                
-        event.clearEvents(eventType='mouse')  # Clear only mouse events
+            
+                # Update panel display
+                for panel_idx in range(len(panels)):
+                    draw_panel(panel_idx, True)  # Force update
+                new_pictures_indices2 = new_pictures_indices.copy()
+        event.clearEvents(eventType='mouse')
+        # Clear only mouse events
 
 
 
 def AiReplace(selected_images):
     new_ai_images = balance_dictionary_to_45(selected_images)
-    print(new_ai_images)
+    
     return new_ai_images
 
 def count_drink_types(dictionary):
@@ -293,7 +325,10 @@ def balance_dictionary_to_45(dictionary):
         ai_selected_images.extend(pick_additional_pictures('Liquor', additional_liquor, all_pictures, new_dict))
     if additional_wine > 0:
         ai_selected_images.extend(pick_additional_pictures('Wine', additional_wine, all_pictures, new_dict))
-
+    if len(ai_selected_images) > 25:
+        print("ALARM: AI selected more than 25 images")
+        random.shuffle(ai_selected_images)
+        ai_selected_images = ai_selected_images[:target_total - len(new_dict)]
     return ai_selected_images
 
 # Usage
