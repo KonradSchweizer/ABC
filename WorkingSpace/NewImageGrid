@@ -310,6 +310,8 @@ def pick_additional_pictures(category, number_of_pictures, all_pictures, new_dic
 def balance_dictionary_to_45(dictionary):
     target_total = 45
     new_dict = dictionary.copy()
+    replaced = target_total - len(flatten_dictionary(dictionary))
+    print(replaced)
     image_directory = 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic'
     all_pictures = list_picture_files(image_directory)
 
@@ -320,18 +322,24 @@ def balance_dictionary_to_45(dictionary):
     additional_wine = round((target_total * wine_prop) - wine_count)
 
     ai_selected_images = []  # Store the new images selected by AI
-
+    options = []
     if additional_beer > 0:
         ai_selected_images.extend(pick_additional_pictures('Beer', additional_beer, all_pictures, new_dict))
+        options.append("Beer")
     if additional_liquor > 0:
         ai_selected_images.extend(pick_additional_pictures('Liquor', additional_liquor, all_pictures, new_dict))
+        options.append("Liquor")
     if additional_wine > 0:
         ai_selected_images.extend(pick_additional_pictures('Wine', additional_wine, all_pictures, new_dict))
+        options.append("Wine")
 
     if len(ai_selected_images) > 25:
         print("ALARM: AI selected more than 25 images")
         random.shuffle(ai_selected_images)
         ai_selected_images = ai_selected_images[:target_total - len(new_dict)]
+    if len(ai_selected_images) < replaced:
+        print("ALARM: AI selected less than the required number of images")
+        ai_selected_images.extend(pick_additional_pictures(random.choice(options), replaced - len(ai_selected_images), all_pictures, new_dict))
     return ai_selected_images
 
 # Usage
