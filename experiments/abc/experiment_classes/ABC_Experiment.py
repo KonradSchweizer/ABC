@@ -307,7 +307,7 @@ class ABCExperiment(Experiment):
         """Creates all config files for the participant after getting assigned a condition."""
         # Create aat configs
         pre_post_aat = self.create_pre_post_aat_config()
-        mini_aats = self.create_mini_aat_configs()
+        mini_aats = self.create_mini_aat_configs() # REMOVE THE MINI AAT
         training_aats = self.create_training_configs()
 
         # Create config for each session
@@ -324,11 +324,12 @@ class ABCExperiment(Experiment):
         except:
             raise Exception("Could not save session 1 config.")
         # Session 2-5 Practice -> Mini AAT -> Training
+        
         for i, mini_aat in enumerate(mini_aats):
             session = {
                 "Participant ID": self.presession["Participant ID"],
                 "Session": i+2,
-                "Assessment": mini_aats[mini_aat],
+                #"Assessment": mini_aats[mini_aat],
                 "Training": training_aats[f"training_aat_{i+2}"]
             }
             try:
@@ -336,6 +337,7 @@ class ABCExperiment(Experiment):
                     json.dump(session, f, indent=4)
             except:
                 raise Exception(f"Could not save session {i+2} config.")
+        
         # Session 6 Practice -> post AAT -> Training
         session6 = {
             "Participant ID": self.presession["Participant ID"],
