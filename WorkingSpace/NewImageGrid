@@ -351,9 +351,12 @@ def flatten_dictionary(dictionary):
 
 
 
-def image_selection():
+def image_selection(type):
     win = visual.Window([1600, 900], monitor="testMonitor", color="black", fullscr=True, allowGUI=True)
-    directory = 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic'
+    if type == "ALC":
+        directory = 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic'
+    else:
+        directory = 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic'
     files = list_picture_files(directory)
     panels = list_of_lists(files)
     picture = img_grid_selection(panels, win)
@@ -362,5 +365,5 @@ def image_selection():
    
    
 
-image_selection()
+image_selection("ALC")
 

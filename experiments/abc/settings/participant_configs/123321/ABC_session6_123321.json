@@ -1,0 +1,2168 @@
+{
+    "Participant ID": "123321",
+    "Session": 6,
+    "Assessment": [
+        {
+            "code": "POSTAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Water/wa_12_1_1_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Non-Sparkling/ns_44_6_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/alcoholic/Beer/b_27_2_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_a/non_alcoholic/Sparkling/sparkling_4.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Water/wa_55_4_3_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/alcoholic/Beer/b_22_2_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/alcoholic/Wine/w_51_5_1_t.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Water/wa_10_1_1_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Wine/w_07_1_2_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Sparkling/s_13_1_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Sparkling/s_3_1_a_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/alcoholic/Liquor/l_4_1_a_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_a/alcoholic/Wine/w_12_1_3_t.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/alcoholic/Wine/w_20_2_2_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/alcoholic/Beer/b_13_1_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_a/non_alcoholic/Water/wa_49_4_3_t.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/alcoholic/Wine/w_07_1_2_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_a/alcoholic/Liquor/l_31_4_t.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/alcoholic/Wine/w_33_3_2_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/non_alcoholic/Non-Sparkling/non_sparkling_4.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Beer/b_27_2_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/non_alcoholic/Water/wa_5_1_1_a.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Non-Sparkling/ns_44_6_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/non_alcoholic/Sparkling/sparkling_3.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Non-Sparkling/ns_12_1_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Sparkling/s_14_2_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Water/wa_9_1_1_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Liquor/l_53_7_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Liquor/l_43_7_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_a/alcoholic/Liquor/l_39_6_t.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Beer/b_20_1_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/alcoholic/Liquor/l_39_6_t.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Liquor/l_30_4_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_a/non_alcoholic/Water/water_2.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/alcoholic/Beer/b_47_3_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Non-Sparkling/ns_26_3_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_a/alcoholic/Liquor/Liqour_4.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Wine/w_20_2_2_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_a/alcoholic/Beer/beer_5.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/alcoholic/Liquor/l_53_7_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/non_alcoholic/Non-Sparkling/ns_16_2_t.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Water/wa_10_1_1_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/alcoholic/Beer/beer_2.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_a/alcoholic/Beer/beer_1.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/alcoholic/Liquor/l_43_7_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/non_alcoholic/Water/water_2.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/alcoholic/Liquor/l_50_7_t.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/alcoholic/Liquor/l_31_4_t.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/non_alcoholic/Non-Sparkling/non_sparkling_1.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Sparkling/s_3_1_a_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/alcoholic/Liquor/Liqour_4.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/alcoholic/Wine/w_48_4_3_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/alcoholic/Beer/beer_1.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/non_alcoholic/Sparkling/sparkling_4.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_a/non_alcoholic/Water/water_4.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/non_alcoholic/Non-Sparkling/non_sparkling_3.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_a/non_alcoholic/Water/wa_43_3_3_t.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_a/non_alcoholic/Non-Sparkling/ns_16_2_t.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Beer/b_22_2_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Beer/b_47_3_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/non_alcoholic/Water/water_4.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_a/non_alcoholic/Non-Sparkling/non_sparkling_3.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/non_alcoholic/Sparkling/s_35_4_t.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/alcoholic/Wine/w_05_1_2_a_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Sparkling/s_24_3_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Beer/b_13_1_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Liquor/l_17_2_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Non-Sparkling/ns_17_2_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Sparkling/s_50_7_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/alcoholic/Beer/beer_5.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Non-Sparkling/ns_7_1_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_a/alcoholic/Wine/wine_2.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_a/alcoholic/Wine/w_51_5_1_t.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/alcoholic/Wine/wine_3.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/alcoholic/Liquor/l_13_1_t.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Wine/w_33_3_2_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/non_alcoholic/Sparkling/sparkling_1.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Sparkling/s_13_1_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Non-Sparkling/ns_7_1_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_a/alcoholic/Wine/wine_3.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_a/alcoholic/Beer/beer_4.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/alcoholic/Wine/w_34_3_2_t.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/alcoholic/Wine/w_12_1_3_t.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Wine/w_48_4_3_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_a/alcoholic/Liquor/l_13_1_t.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/alcoholic/Liquor/l_30_4_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Water/wa_12_1_1_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/alcoholic/Liquor/l_17_2_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Liquor/l_4_1_a_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_a/non_alcoholic/Non-Sparkling/ns_34_4_t.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/non_alcoholic/Water/wa_43_3_3_t.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Wine/w_05_1_2_a_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Sparkling/s_50_7_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_a/non_alcoholic/Non-Sparkling/non_sparkling_4.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Non-Sparkling/ns_26_3_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_a/alcoholic/Beer/beer_2.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/non_alcoholic/Water/wa_49_4_3_t.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_a/non_alcoholic/Water/wa_5_1_1_a.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_a/alcoholic/Wine/w_34_3_2_t.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_a/non_alcoholic/Non-Sparkling/non_sparkling_1.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/non_alcoholic/Sparkling/sparkling_2.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_a/alcoholic/Beer/beer_3.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Water/wa_20_1_2_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/non_alcoholic/Non-Sparkling/ns_34_4_t.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Non-Sparkling/ns_17_2_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Non-Sparkling/ns_12_1_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/alcoholic/Beer/b_20_1_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Water/wa_55_4_3_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_a/alcoholic/Liquor/l_50_7_t.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_a/non_alcoholic/Sparkling/s_35_4_t.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_a/non_alcoholic/Sparkling/sparkling_2.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Sparkling/s_14_2_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/alcoholic/Beer/beer_4.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/alcoholic/Wine/wine_2.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Water/wa_20_1_2_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_a/alcoholic/Beer/beer_3.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Sparkling/s_24_3_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Water/wa_9_1_1_t_B.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_a/non_alcoholic/Sparkling/sparkling_3.jpg"
+        },
+        {
+            "code": "POSTAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_a/non_alcoholic/Sparkling/sparkling_1.jpg"
+        }
+    ],
+    "Training": [
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Beer/b_47_3_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Liquor/l_29_4_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Wine/w_44_4_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_23_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_03_1_a.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Wine/w_11_1_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_51_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Water/wa_35_1_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_31_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_53__t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_18_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Beer/b_20_1_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Wine/w_20_2_2_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_39_5_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Wine/w_05_1_2_a_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_23_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_28_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Wine/w_19_2_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_36_4_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_15_1_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Sparkling/s_50_7_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_05_1_a.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Liquor/l_23_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_18_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Liquor/l_4_1_a_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Liquor/l_22_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Wine/w_26_2_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_54_9_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Beer/b_13_1_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Wine/w_06_1_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_36_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_23_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_35_4_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_45_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Liquor/l_53_7_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Beer/b_20_1_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_03_1_a.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_35_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_54_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Wine/w_48_4_3_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Wine/w_36_3_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_40_5_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_24_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Wine/w_06_1_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_39_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_51__t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_46_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_15_1_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Liquor/l_30_4_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Sparkling/s_24_3_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Liquor/l_22_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_1_1_a.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Non-Sparkling/ns_17_2_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_11_1_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Water/wa_35_1_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Sparkling/s_14_2_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Water/wa_12_1_1_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Sparkling/s_3_1_a_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Water/wa_20_1_2_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_23_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Wine/w_07_1_2_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Wine/w_36_3_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_41_6_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Water/wa_20_1_2_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_02_1_a.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Water/wa_36_1_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_29_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Wine/w_31_3_1_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_50_8_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Non-Sparkling/ns_12_1_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_30_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_54_9_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Wine/w_05_1_2_a_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_10_1_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_10_1_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_13_1_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_55__t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Sparkling/s_24_3_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_36_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_37_4_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_51__t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Wine/w_18_2_1_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Water/wa_10_1_1_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_38_5_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Beer/b_47_3_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Water/wa_9_1_1_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_26_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Water/wa_18_1_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_13_1_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Wine/w_48_4_3_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_02_1_a.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Liquor/l_43_7_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_52__t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_38_5_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_26_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Wine/w_30_3_1_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_45_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Liquor/l_2_1_a.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Beer/b_27_2_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Water/wa_55_4_3_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Water/wa_55_4_3_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_38_4_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Wine/w_20_2_2_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Wine/w_44_4_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_17_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Liquor/l_17_2_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Liquor/l_30_4_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_52_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Wine/w_55_5_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_51_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_33_4_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Water/wa_33_1_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Wine/w_19_2_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_46_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_23_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_40_5_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_35_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_1_1_a.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_22_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_01_1_a.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_52_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_36_4_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_17_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Wine/w_55_5_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Wine/w_18_2_1_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_14_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_40_5_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_54__t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_45_6_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Wine/w_15_2_1_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Liquor/l_4_1_a_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Non-Sparkling/ns_26_3_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Wine/w_04_1_1_a.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Wine/w_41_4_1_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Wine/w_03_1_1_a.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Liquor/l_29_4_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_31_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Non-Sparkling/ns_26_3_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_49_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_26_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Beer/b_27_2_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_51_7_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_52__t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_36_4_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Wine/w_08_1_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Water/wa_12_1_1_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Wine/w_30_3_1_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_33_4_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_6_1_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_01_1_a.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Wine/w_03_1_1_a.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Wine/w_26_2_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Water/wa_9_1_1_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_32_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_27_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Non-Sparkling/ns_44_6_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_06_1_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_19_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Sparkling/s_13_1_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Wine/w_04_1_1_a.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_27_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_36_4_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_12_1_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_41_6_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_12_1_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_32_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_49_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Liquor/l_23_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_19_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Beer/b_13_1_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Liquor/l_53_7_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Wine/w_07_1_2_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_29_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Sparkling/s_3_1_a_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_45_6_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Sparkling/s_14_2_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_23_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_05_1_a.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_28_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_25_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Sparkling/s_13_1_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_53__t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Non-Sparkling/ns_7_1_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Non-Sparkling/ns_12_1_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_54__t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_28_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Water/wa_18_1_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_22_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_38_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_33_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Liquor/l_17_2_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_14_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_30_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Beer/b_22_2_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_25_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_26_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_24_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Water/wa_17_1_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_35_4_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Non-Sparkling/ns_44_6_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_6_1_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_33_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Water/wa_10_1_1_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_6_1_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_39_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Wine/w_33_3_2_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_37_4_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_38_4_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Wine/w_31_3_1_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_40_5_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_11_1_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_28_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Sparkling/s_51_7_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Wine/w_08_1_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Water/wa_36_1_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Liquor/l_2_1_a.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Liquor/l_43_7_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Liquor/l_36_6_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_39_5_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_55__t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_2_1_a.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_2_1_a.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Liquor/l_36_6_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Non-Sparkling/ns_7_1_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_50_8_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_10_1_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Water/wa_33_1_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Water/wa_17_1_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Sparkling/s_50_7_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Wine/w_33_3_2_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_38_2_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_10_1_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Wine/w_11_1_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_06_1_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_personalization/non_alcoholic/Non-Sparkling/ns_6_1_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Wine/w_15_2_1_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Beer/b_54_3_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_POS_PULL_RIGHT",
+            "delay": 0,
+            "trialtype": "PULL",
+            "prime": "experiments/abc/images/set_b/non_alcoholic/Non-Sparkling/ns_17_2_t_B.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_personalization/alcoholic/Wine/w_41_4_1_t.jpg"
+        },
+        {
+            "code": "TRAINAAT_0_NEG_PUSH_LEFT",
+            "delay": 0,
+            "trialtype": "PUSH",
+            "prime": "experiments/abc/images/set_b/alcoholic/Beer/b_22_2_t_B.jpg"
+        }
+    ]
+}

@@ -1144,7 +1144,7 @@ class ABCPresession(Presession):
         self.initialize_window()
     
         # Instruction screen
-        """
+        
         self.instruction_screen()
         
         # Rate the scenarios
@@ -1157,7 +1157,7 @@ class ABCPresession(Presession):
         self.pre_consequence()
         text = self.language["Presession"]["Consequence Rating"]
         self.rating_screen(text, "Consequence Rating")
-        """
+        
         # Select non-alcoholic drinks
         self.pre_nonalc()
         text = self.language["Presession"]["Non-Alcoholic Selection"]
@@ -1172,7 +1172,7 @@ class ABCPresession(Presession):
         self.personalization(selection = selection, category="alcoholic", text=text) 
         
         #imagine Scenario
-        self.imagine_scenario_screen()
+        #self.imagine_scenario_screen()
         # Imagine Consequence
     
         # Json dump the data
