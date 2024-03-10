@@ -57,7 +57,6 @@ class ABCPresession(Presession):
 
     def validate_language(self) -> None:
         """Language must be ABCLanguage"""
-        
         if not isinstance(self.language, ABCLanguage):
             raise ValueError("language must be a ABCLanguage object")
         
@@ -155,7 +154,6 @@ class ABCPresession(Presession):
                 error_label.config(text="Ungültige Eingabe, bitte geben Sie eine gültige Fallnummer (6-stellig) \n und ein Geschlecht aus dem Dropdown-Menü ein")
                 error_label.pack(pady=10)
         
-        # Main GUI layout with bigger font size and centered
         title_label = tk.Label(window, text=self.language["Presession"]["Gui Participant ID"]["Title"], bg='black', fg='white', font=("Arial", 30))
         title_label.pack(pady=50)
 
@@ -173,10 +171,6 @@ class ABCPresession(Presession):
 
         submit_button = tk.Button(window, text="Fortfahren", bg='blue', fg='white', font=("Arial", 20), command= validate_and_save)
         submit_button.pack(pady=50)
-
-        # Bind the "escape" key to quit the entire experiment
-        
-        
         window.mainloop()
     
     def wait_screen(self) -> None:
@@ -201,7 +195,6 @@ class ABCPresession(Presession):
         self.wait_keys()  
 
     def imagine_scenario_screen(self) -> None:
-        
         self.data["Imagination Ratings"] = {}
         # Rate Desire Pre Screen
         instruction_text = self.language["Presession"]["Rate Desire Pre Screen"]["Text"]
@@ -276,80 +269,6 @@ class ABCPresession(Presession):
                     #self.data["Imagination Ratings"]["Desire Post"] = slider_2.getRating()
                     break
             
-    def imagery_exercise_screen(self) -> None:
-        
-        
-        # List of imagery exercises
-        exercises = [
-            {
-                "title": None,
-                "text": "Prepare yourself for a brief journey of imagination. Ensure you're in a comfortable position, either seated or lying down. Take a deep breath."
-            },
-            {
-                "title": None,
-                "text": "Imagine you're slowly awakening in a serene clinic. As your eyes flutter open, you feel a warm ray of sunlight on your face. You glance to the side, noticing the sun gleaming through the window."
-            },
-            {
-                "title": None,
-                "text": "Close your eyes for a moment and let that sunlight wash over you."
-            },
-            {
-                "title": None,
-                "text": "Feel the urge to explore. Imagine yourself gently rising from the bed and gracefully walking towards the window. You're curious about the world outside."
-            },
-            {
-                "title": None,
-                "text": "Close your eyes and picture the scene outside the window."
-            },
-            {
-                "title": None,
-                "text": "What do you see? Tall buildings touching the sky, a lush green forest, children playing, or perhaps birds soaring high? Engage with the scenery, feel the connection."
-            }
-        ]
-        space_continue_text = "Press space to continue."
-
-        def wait_for_keys(keys: list) -> str:
-            """Waits for specific keys and returns the pressed key."""
-            while True:
-                pressed_keys = event.getKeys()
-                for key in pressed_keys:
-                    if key in keys:
-                        return key
-
-        def show_text_and_wait(text: str, position: tuple, color: str = "white", height: float = 0.1) -> None:
-            """Displays the text and waits for the space key or the escape key."""
-            text_stim = visual.TextStim(self.win, text=text, color=color, pos=position, font="Arial", height=height)
-            text_stim.draw()
-            self.win.flip()
-            core.wait(5)
-
-            continue_stim = visual.TextStim(self.win, text=space_continue_text, color="white", pos=(0, -0.95), font="Arial", height=0.05)
-            continue_stim.draw()
-            text_stim.draw()
-            self.win.flip()
-
-            key = wait_for_keys(["space"])
-            
-
-        def display_exercise(text, is_intro=False, is_first=False):
-            show_text_and_wait(text, (0, 0))
-
-            if is_intro:
-                return
-
-
-        try:
-            display_exercise(exercises[0]["text"], is_intro=True)
-
-            display_exercise(exercises[1]["text"], is_first=True)
-
-            for exercise in exercises[2:]:
-                display_exercise(exercise["text"])
-        except Exception as e:
-            print(f"An error occurred: {e}")
-            self.quit()
-            
-
     def audio_imagination_screen(self):
 
         # Display instruction text
@@ -455,19 +374,6 @@ class ABCPresession(Presession):
                 self.win.flip()
 
             core.wait(0.01)
-
-    def imagine_consequence_screen(self) -> None:
-        title_text = self.language["Presession"]["Imagine Consequence Screen"]["Title"]
-        instruction_text = self.language["Presession"]["Imagine Consequence Screen"]["Text"]
-        continue_text = self.language["Presession"]["Imagine Consequence Screen"]["Continue"]
-        title = visual.TextStim(self.win, text=title_text, color="white", pos=(0, 0.95), font="Arial", height=0.05)
-        continue_text = visual.TextStim(self.win, text=continue_text, color="white", pos=(0, -0.95), font="Arial", height=0.05)
-        instruction = visual.TextStim(self.win, text=instruction_text, color="white", pos=(0, 0), font="Arial", height=0.05)
-        title.draw()
-        instruction.draw()
-        continue_text.draw()
-        self.win.flip()
-        self.wait_keys() 
     
     def end_screen(self) -> None:
         end_text = self.language["Presession"]["End Screen"]["Text"]
@@ -492,15 +398,17 @@ class ABCPresession(Presession):
         instruction_text = rating_dict["Instruction"]
         continue_text = rating_dict["Continue"]
         slider_labels = rating_dict["Labels"]
-        if rate_images:
-            image_names = os.listdir(image_path)
-            questions = {image_names[i]: image_names[i] for i in range(0, len(image_names))}
-            slider_pos = (0, -0.5)
-            question_pos = (0, 0.7)
-        else:
-            questions = rating_dict["Questions"]
-            slider_pos = (0, -0.2)
-            question_pos = (0, 0.2)
+        
+        questions = rating_dict["Questions"]
+        
+        items = list(questions.items())
+        random.shuffle(items)
+        questions = dict(items)
+        
+        
+        slider_pos = (0, -0.2)
+        question_pos = (0, 0.2)
+        
         title = visual.TextStim(self.win, text=title_text, color="lightgrey", pos=(0, 0.95), font= "Arial", height=0.07)
         continue_text = visual.TextStim(self.win, text=continue_text, color="blue", pos=(0, -0.9), font= "Arial", height=0.07)
         # Create the slider
@@ -522,29 +430,13 @@ class ABCPresession(Presession):
             to_draw = []
             slider.reset()
             # Define question text
-            if rate_images:
-                question_text_stim = visual.TextStim(self.win, text=f"{instruction_text}", color="white", pos=question_pos, height=0.07, font="Arial")
-                image = visual.ImageStim(self.win, image=f"{image_path}/{questions[question]}", pos=(0, 0))
-                to_draw.append(image)
-            
-            
-            
+
+            if rating_dict["Title"] == "Frühere Trinksituationen":
+                question_text = f'wenn ich {question_text}'
+                self.data[rating_name]["Custom Text"] = question_text
             else:
-                if question == "Custom1": # Custom1 is chosen to remove the custum question from the list if you want it back change it to "Custom"
-                        question_text = self.add_own_scenario_consequence(rating_dict)
-                        if not question_text.strip():
-                            continue
-                        else:
-                            if rating_dict["Title"] == "Frühere Trinksituationen":
-                                question_text = f'wenn ich {question_text}'
-                                self.data[rating_name]["Custom Text"] = question_text
-                            else:
-                                question_text = question_text
-                                self.data[rating_name]["Custom Text"] = question_text
-                else:
-                    question_text = questions[question]
+                question_text = questions[question]
                 question_text_stim = visual.TextStim(self.win, text=f"{instruction_text}\n{question_text}", color="white", pos=question_pos, height=0.07, font="Arial", wrapWidth= 1.5)
-              
             # Draw the screen    
             to_draw += [title, question_text_stim, slider, continue_text]
             timer = core.Clock()
@@ -559,126 +451,10 @@ class ABCPresession(Presession):
                         self.data[rating_name][question] = slider.getRating()
                         break
                 if "space" in keys and rating is None:
-                    visual.TextStim(self.win, text="Bitte bewerten Sie die Frage in dem Sie auf die Skala klicken.", color="red", pos=(0, 0), height=0.07, font="Arial", wrapWidth= 1.5).draw()
+                    visual.TextStim(self.win, text="Bitte beantworten Sie zuerst die Frage in dem Sie auf die Skala klicken.", color="red", pos=(0, 0), height=0.07, font="Arial", wrapWidth= 1.5).draw()
                     self.win.flip()
                     core.wait(3)
-                
-        
         self.win.flip()
-        
-    def add_own_scenario_consequence(self, rating_dict: dict):
-        
-        if rating_dict["Title"] == "Meine Trinksituationen":
-            title_text = rating_dict["Title"]
-            instruction_text = rating_dict["Instruction Custom"]
-            
-            title = visual.TextStim(self.win, text=title_text, color="white", pos=(0, 0.95), font="lightgrey", height=0.07)
-            instruction = visual.TextStim(self.win, text=instruction_text, color="white", pos=(0, 0.35), font="Arial", height=0.06, wrapWidth= 1.5, alignText= "left")
-            sentence_y_pos = -0.45
-
-            # Width of the text box
-            text_box_width = 1.2
-
-            # Since sentence_part1 is aligned right, it should end where the text_box starts. 
-            # So, its x-position is -half of the text_box width.
-            sentence_part1_x_pos = -text_box_width / 2
-
-            # Similarly, since sentence_part2 is aligned left, it should start where the text_box ends.
-            # So, its x-position is half of the text_box width.
-            sentence_part2_x_pos = text_box_width / 2
-
-            sentence_part1 = visual.TextStim(self.win, text="Im vergangenen Jahr habe ich oft Alkohol getrunken wenn ich: ", color="white", pos=(0, -0.35), font="Arial", height=0.06, alignHoriz="center")
-
-            sentence_part2 = visual.TextStim(self.win, text=".", color="white", pos=(sentence_part2_x_pos, sentence_y_pos), font="Arial", height=0.05, alignHoriz="left")
-            # Adjust size and position of the text box and set color of the text
-            text_box = visual.TextBox2(self.win, text="", color="white", pos=(0, sentence_y_pos), font="Arial", letterHeight=0.05, editable=True, borderColor="white", borderWidth=1, size=(1.25, 0.07), anchor="center")
-
-            # Move the buttons closer below the text box
-            submit_button = visual.Rect(self.win, width=0.25, height=0.1, fillColor="blue", pos=(-0.15, -0.8))
-            submit_text = visual.TextStim(self.win, text="Fortfahren", color="white", pos=submit_button.pos, font="Arial", height=0.05)
-            idk_button = visual.Rect(self.win, width=0.25, height=0.1, fillColor="red", pos=(0.15, -0.8 ))
-            idk_text = visual.TextStim(self.win, text="Keine Angabe", color="white", pos=idk_button.pos, font="Arial", height=0.05)
-
-            to_draw = [title, instruction, sentence_part1, text_box, sentence_part2, submit_button, submit_text, idk_button, idk_text]
-            mouse = event.Mouse()
-            
-            
-            while True:
-                for item in to_draw:
-                    item.draw()
-                    
-                    
-                
-                if len(text_box.text) > 100:
-                    warning_text = visual.TextStim(self.win, text="Bitte bleiben sie unter 100 Buchstaben!", color="red", pos=(0, 0.3), font="Arial", height=0.05)
-                    warning_text.draw()
-                
-                self.win.flip()
-                
-                # Check for mouse click on the submit button
-                if mouse.isPressedIn(submit_button):
-                    if len(text_box.text) <= 100:
-                        return text_box.text
-                if mouse.isPressedIn(idk_button):
-                    return ""
-                
-              
-        else:
-            title_text = rating_dict["Title"]
-            instruction_text = rating_dict["Instruction Custom"]
-
-            title = visual.TextStim(self.win, text=title_text, color="lightgrey", pos=(0, 0.95), font="Arial", height=0.07)
-            instruction = visual.TextStim(self.win, text=instruction_text, color="white", pos=(0, 0.6), font="Arial", height=0.06, wrapWidth= 1.5, alignText= "left")
-            sentence_y_pos = 0
-
-            # Width of the text box
-            text_box_width = 0.35
-
-            # Since sentence_part1 is aligned right, it should end where the text_box starts. 
-            # So, its x-position is -half of the text_box width.
-            sentence_part1_x_pos = -text_box_width / 2
-
-            # Similarly, since sentence_part2 is aligned left, it should start where the text_box ends.
-            # So, its x-position is half of the text_box width.
-            sentence_part2_x_pos = text_box_width / 2
-
-            sentence_part1 = visual.TextStim(self.win, text="Ein wichtiger Grund abstinent zu bleiben ist: ", color="white", pos=(sentence_part1_x_pos, sentence_y_pos), font="Arial", height=0.06, alignHoriz="right")
-
-            sentence_part2 = visual.TextStim(self.win, text=".", color="white", pos=(sentence_part2_x_pos, sentence_y_pos), font="Arial", height=0.07, alignHoriz="left")
-            # Adjust size and position of the text box and set color of the text
-            text_box = visual.TextBox2(self.win, text="", color="white", pos=(0, sentence_y_pos), font="Arial", letterHeight=0.05, editable=True, borderColor="white", borderWidth=1, size=(0.35, 0.07), anchor="center")
-
-            # Move the buttons closer below the text box
-            submit_button = visual.Rect(self.win, width=0.2, height=0.1, fillColor="blue", pos=(-0.15, -0.8))
-            submit_text = visual.TextStim(self.win, text="Fortfahren", color="white", pos=submit_button.pos, font="Arial", height=0.05)
-            idk_button = visual.Rect(self.win, width=0.2, height=0.1, fillColor="red", pos=(0.15, -0.8))
-            idk_text = visual.TextStim(self.win, text="Keine Angabe", color="white", pos=idk_button.pos, font="Arial", height=0.05)
-
-            to_draw = [title, instruction, sentence_part1, text_box, sentence_part2, submit_button, submit_text, idk_button, idk_text]
-            mouse = event.Mouse()
-
-            while True:
-                for item in to_draw:
-                    item.draw()
-
-                num_words = len(text_box.text.split())
-
-                if len(text_box.text) > 60 or num_words > 3:
-                    warning_text = visual.TextStim(self.win, text="Maximal 3 wörter oder 60 Buchstaben", color="red", pos=(0, 0.3), font="Arial", height=0.05)
-                    warning_text.draw()
-
-                self.win.flip()
-                
-                if mouse.isPressedIn(submit_button):
-                    if len(text_box.text) <= 60:
-                        return text_box.text
-
-                if mouse.isPressedIn(idk_button):
-                    return ""
-########################################################################################################################################################################################
-########################################################################################################################################################################################    
-########################################################################################################################################################################################           
-########################################################################################################################################################################################
 
     def img_grid_selection(self, panels, directory, type):
         win = self.win
@@ -689,8 +465,6 @@ class ABCPresession(Presession):
         loading_message.draw()
         win.flip()  # Show the loading message on the screen
 
-        
-        
         # Constants for grid layout
         rows, cols = 3, 5
         height = 0.6  # Height is used for scaling the image
@@ -725,8 +499,7 @@ class ABCPresession(Presession):
         selector_boxes = [visual.Rect(win, width=0.09, height=0.178 , pos=selector.pos, lineColor=None, fillColor=None) for selector in panel_selectors]
         # New: Text stimuli for selected image counts
         selected_count_texts = [visual.TextStim(win, text="", pos=(selector.pos[0] - 0.02, selector.pos[1] - 0.07), height=0.05, color='green') for selector in panel_selectors]
-
-        # Function to draw a specific panel
+        
     # Function to draw a specific panel
         def draw_panel(panel_index, panel_changed):
             if panel_changed:
@@ -834,7 +607,6 @@ class ABCPresession(Presession):
                 while True:
                         if mouse.getPressed()[0] == 0:
                             break
-
 
             # Update reminder text
             unseen_panels = len(panels) - len(visited_panels)
@@ -950,7 +722,6 @@ class ABCPresession(Presession):
         # Randomly select the required number of pictures
         selected_pictures = random.sample(category_specifiv_pictures, min(number_of_pictures, len(category_specifiv_pictures)))
         return selected_pictures
-
 
     def balance_dictionary_to_45(self, dictionary, directory, type):
         target_total = 45
@@ -1136,11 +907,7 @@ class ABCPresession(Presession):
         if type == "alcoholic":
             self.data["Automatic_Selection_alcoholic"] = categorized_automatic_selections
         self.win.flip()
-########################################################################################################################################################################################
-########################################################################################################################################################################################
-########################################################################################################################################################################################
-########################################################################################################################################################################################  
-    
+
     def pre_scenario(self):
         visual.TextStim(self.win, pos=(0, 0.9), text = "Früheren Trinksituationen", color="lightgrey", height = 0.07, font="Arial").draw()
         visual.TextStim(self.win, text = "Hier finden Sie Situationen, in denen Menschen Alkohol trinken.\n\nBitte geben Sie an, wie häufig Sie in jeder dieser Situationen im letzten Jahr Alkohol getrunken haben.\n\nVerwenden Sie dafür die Maus.\n\nKlicken Sie auf den Strich auf der Skala, der am besten anzeigt, wie häufig Sie in dieser Situation im letzten Jahr getrunken haben.\n\nDrücken Sie die Leertaste, wenn Sie mit Ihrer Entscheidung zufrieden sind.", color="white", pos=(0, 0), font="Arial", height=0.06, alignText='left', wrapWidth= 1.6).draw()
@@ -1178,9 +945,7 @@ class ABCPresession(Presession):
         except:
             raise Exception("Could not save general config.")        
         
-    def run(self):
-        
-                
+    def run(self):       
     # Identify the participant
         self.identify_participant()
         #make sure that participant is registered before pre-session is started
@@ -1190,7 +955,7 @@ class ABCPresession(Presession):
         
         # Initialize the window
         self.initialize_window()
-        """
+       
         # Instruction screen
         self.instruction_screen()
         
@@ -1204,7 +969,7 @@ class ABCPresession(Presession):
         self.pre_consequence()
         text = self.language["Presession"]["Consequence Rating"]
         self.rating_screen(text, "Consequence Rating")
-        """
+       
         # Select non-alcoholic drinks
         self.pre_nonalc()
         self.image_selection(type ="non_alcoholic")
@@ -1213,7 +978,7 @@ class ABCPresession(Presession):
         self.image_selection(type ="alcoholic")
       
         #imagine Scenario
-        #self.imagine_scenario_screen()
+        self.imagine_scenario_screen()
         # Imagine Consequence
     
         # Json dump the data

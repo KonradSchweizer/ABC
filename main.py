@@ -5,8 +5,8 @@ This script runs the ABC experiment. It has two boolean variables, `run_presessi
 run_presession = bool
 run_experiment = bool
 
-#run_presession = True
-run_experiment = True
+run_presession = True
+#run_experiment = True
 if run_presession == True:
     from experiments.abc.experiment_classes.ABC_Presession import ABCPresession
     ABCPresession().run()

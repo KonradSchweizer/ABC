@@ -1,83 +1,16 @@
-import os, random
+import random
 
+# Sample dictionary
+my_dict = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
 
+# Convert dictionary to list of tuples
+items = list(my_dict.items())
 
-pics = {0: ['C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic\\Beer\\b_01_1_a.jpg', 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic\\Beer\\b_02_1_a.jpg', 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic\\Beer\\b_03_1_a.jpg', 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic\\Beer\\b_04_1_a.jpg', 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic\\Beer\\b_07_1_t.jpg', 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic\\Beer\\b_08_1_t.jpg', 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic\\Beer\\b_09_1_t.jpg', 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic\\Beer\\b_11_1_t.jpg', 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic\\Beer\\b_14_1_t.jpg', 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic\\Beer\\b_15_1_t.jpg'], 1: [], 2: [], 3: ['C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_11_1_t.jpg', 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_12_1_t.jpg', 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_14_1_t.jpg', 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_15_2_t.jpg', 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_18_2_t.jpg', 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_19_2_t.jpg', 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_1_1_a.jpg', 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_20_2_t.jpg', 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_22_3_t.jpg', 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_23_3_t.jpg'], 4: [], 5: [], 6: [], 7: ['C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic\\Wine\\w_22_2_2_t.jpg', 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic\\Wine\\w_23_2_3_t.jpg', 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic\\Wine\\w_24_2_3_t.jpg', 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic\\Wine\\w_25_2_3_t.jpg', 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic\\Wine\\w_27_2_4_t.jpg', 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic\\Wine\\w_29_3_1_t.jpg', 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic\\Wine\\w_30_3_1_t.jpg', 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic\\Wine\\w_31_3_1_t.jpg', 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic\\Wine\\w_35_3_3_t.jpg', 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic\\Wine\\w_36_3_3_t.jpg'], 8: []}
+# Shuffle the list
+random.shuffle(items)
 
+# Convert the shuffled list back to a dictionary
+shuffled_dict = dict(items)
 
-image_directory = 'C:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/alcoholic'
-
-def list_picture_files(initial_directory):
-    picture_files = []
-    for root, dirs, files in os.walk(initial_directory):
-        for file in files:
-            if file.lower().endswith(('.jpg', '.png')):
-                full_path = os.path.join(root, file)
-                picture_files.append(full_path)
-    return picture_files
-
-def count_drink_types(dictionary):
-    beer_sum = 0
-    liquor_sum = 0
-    wine_sum = 0
-
-    for key, values in dictionary.items():
-        if 0 <= key <= 2:  # Keys 0 to 2 are beers
-            beer_sum += len(values)
-        elif 3 <= key <= 5:  # Keys 3 to 5 are liquors
-            liquor_sum += len(values)
-        elif 6 <= key <= 8:  # Keys 6 to 8 are wines
-            wine_sum += len(values)
-
-    return beer_sum, liquor_sum, wine_sum   
-
-def count_and_proportion_drink_types(dictionary):
-    total_count = sum(len(values) for values in dictionary.values())
-    beer_count, liquor_count, wine_count = count_drink_types(dictionary)
-
-    beer_prop = beer_count / total_count if total_count > 0 else 0
-    liquor_prop = liquor_count / total_count if total_count > 0 else 0
-    wine_prop = wine_count / total_count if total_count > 0 else 0
-
-    return beer_count, liquor_count, wine_count, beer_prop, liquor_prop, wine_prop
-
-def pick_additional_pictures(number_of_pictures, available_pictures):
-    all_pictures = list_picture_files(image_directory)
-    initial_pictures = [item for sublist in pics.values() for item in sublist]
-    available_pictures = [pic for pic in all_pictures if pic not in initial_pictures]
-    # Randomly select the required number of pictures
-    selected_pictures = random.sample(available_pictures, min(number_of_pictures, len(available_pictures)))
-    return selected_pictures
-
-def balance_dictionary_to_45(dictionary):
-    target_total = 45
-    new_dict = dictionary.copy()
-    all_pictures = list_picture_files(image_directory)
-    initial_pictures = [item for sublist in pics.values() for item in sublist]
-    available_pictures = [pic for pic in all_pictures if pic not in initial_pictures]
-
-    beer_count, liquor_count, wine_count, beer_prop, liquor_prop, wine_prop = count_and_proportion_drink_types(dictionary)
-
-    # Calculate additional pictures needed for each category
-    additional_beer = round((target_total * beer_prop) - beer_count)
-    additional_liquor = round((target_total * liquor_prop) - liquor_count)
-    additional_wine = round((target_total * wine_prop) - wine_count)
-
-    # Pick additional pictures for each category
-    if additional_beer > 0:
-        new_dict['beer_additional'] = pick_additional_pictures('beer', additional_beer, all_pictures)
-    if additional_liquor > 0:
-        new_dict['liquor_additional'] = pick_additional_pictures('liquor', additional_liquor, all_pictures)
-    if additional_wine > 0:
-        new_dict['wine_additional'] = pick_additional_pictures('wine', additional_wine, all_pictures)
-
-    return new_dict
-
-# Usage
-
-new_pics = balance_dictionary_to_45(pics)
-print(new_pics)
-
-
-
+print(shuffled_dict)
 
