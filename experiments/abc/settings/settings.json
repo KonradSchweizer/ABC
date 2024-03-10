@@ -18,12 +18,12 @@
         "1": {
             "Mann": 1,
             "Frau": 1,
-            "Anderes": 1,
+            "Anderes": 2,
             "Keine Angabe": 2
         },
         "2": {
             "Mann": 1,
-            "Frau": 0,
+            "Frau": 1,
             "Anderes": 1,
             "Keine Angabe": 1
         },
@@ -36,7 +36,7 @@
         "4": {
             "Mann": 1,
             "Frau": 0,
-            "Anderes": 0,
+            "Anderes": 1,
             "Keine Angabe": 1
         }
     },

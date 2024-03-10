@@ -217,7 +217,6 @@ class ABCExperiment(Experiment):
         # Validate Condition
         if self.presession["Condition"] not in self.conditions.keys():
             raise ValueError("A valid condition mus be assigned before creating session configs.")
-        
         alc_images = []
         non_alc_images = []
         mini_aat = []
@@ -329,7 +328,7 @@ class ABCExperiment(Experiment):
             session = {
                 "Participant ID": self.presession["Participant ID"],
                 "Session": i+2,
-                #"Assessment": mini_aats[mini_aat],
+                "Assessment": mini_aats[mini_aat],
                 "Training": training_aats[f"training_aat_{i+2}"]
             }
             try:
@@ -384,7 +383,7 @@ class ABCExperiment(Experiment):
         self.win.winHandle.set_fullscreen(True)  # Make the window appear in the foreground and topmost
 
         instruction_text = (
-            "Bitte beschreiben Sie von 0 (gar nicht überzeugt) bis 10 (absolut überzeugt), wie sehr Sie davon überzeugt sind, dass das Anti-Alkohol-Training Ihnen dabei helfen wird, abstinent zu bleiben."
+            "Bitte beschreiben Sie von 0 (gar nicht überzeugt) bis 10 (absolut überzeugt), wie sehr Sie davon überzeugt sind, dass das Anti-Alkohol-Training Ihnen dabei helfen wird, nent zu bleiben."
         )
         continue_text = "Bitte drücken Sie die LEERTASTE, um fortzufahren."
         slider_labels = ["gar nicht überzeugt"] + [""] * 9 + ["absolut überzeugt"]  # for a slider with 11 points

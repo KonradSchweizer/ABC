@@ -135,8 +135,7 @@
                 "Friends": "wenn Leute, mit denen Sie früher getrunken haben, Sie wieder zum Trinken ermuntert haben.",
                 "Irritated": "wenn Sie innerlich verärgert waren.",
                 "Surprised": "wenn Sie vom Verlangen nach Alkohol überrascht wurden.",
-                "Party": "wenn es Ihnen gut ging oder Sie mit anderen gefeiert haben.",
-                "Custom": "Custom"
+                "Party": "wenn es Ihnen gut ging oder Sie mit anderen gefeiert haben."
             }
         },
         "Consequence Rating": {
@@ -181,8 +180,7 @@
                 "Increased ability to reduce other harmful habits": "Erhöhte Fähigkeit, andere schädliche Gewohnheiten zu reduzieren.",
                 "Free time": "Aktive Freizeitgestaltung.",
                 "More time for hobbies": "Mehr Zeit für Hobbys.",
-                "Structure": "Stabile Tagesstruktur.",
-                "Custom": "Custom"
+                "Structure": "Stabile Tagesstruktur."
             }
         },
         "Non-Alcoholic Rating": {

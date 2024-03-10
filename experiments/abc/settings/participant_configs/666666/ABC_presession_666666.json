@@ -1,0 +1,91 @@
+{
+    "Participant ID": "666666",
+    "Sex": "Anderes",
+    "Condition": "",
+    "Condition_saved": "",
+    "Expectation": {},
+    "Training_Vividness": {},
+    "Consequence": {},
+    "Current Session": 0,
+    "non_alcoholic": {
+        "Sparkling Selection": {
+            "0": [
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_11_1_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_13_1_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_14_2_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_15_2_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_19_2_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_1_1_a.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_21_2_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_22_2_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_23_3_t.jpg"
+            ],
+            "1": [],
+            "2": [
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_52__t.jpg"
+            ]
+        },
+        "Non-Sparkling Selection": {
+            "3": [
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_10_1_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_11_1_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_12_1_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_15_2_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_16_2_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_17_2_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_18_2_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_19_2_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_1_1_a.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_20_2_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_21_2_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_22_2_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_23_3_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_25_3_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_26_3_t.jpg"
+            ],
+            "4": [],
+            "5": [
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_42_6_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_43_6_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_44_6_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_45_6_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_47_6_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_49_7_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_4_1_a.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_51_7_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_53_8_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_55_9_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_5_1_a.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_6_1_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_7_1_t.jpg"
+            ]
+        },
+        "Water Selection": {
+            "6": [],
+            "7": [],
+            "8": [
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_44_3_3_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_45_3_3_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_46_3_3_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_4_1_1_a.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_50_4_3_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_51_4_3_t.jpg",
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_55_4_3_t.jpg"
+            ]
+        },
+        "Automatic_Selection": {
+            "0": [],
+            "1": [],
+            "2": [
+                "c:/Users/Konrad Schweizer/OneDrive/Dokumente/University/Master/Major_Research_Project/Code/Python_Task/abc-psychopy-mainV2/abc-psychopy-main/experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_52__t.jpg"
+            ],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": [],
+            "8": []
+        }
+    },
+    "alcoholic": {}
+}

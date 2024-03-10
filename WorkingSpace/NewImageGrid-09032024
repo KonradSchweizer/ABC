@@ -62,6 +62,8 @@ def img_grid_selection(panels, win):
     selector_boxes = [visual.Rect(win, width=0.09, height=0.178 , pos=selector.pos, lineColor=None, fillColor=None) for selector in panel_selectors]
     # New: Text stimuli for selected image counts
     selected_count_texts = [visual.TextStim(win, text="", pos=(selector.pos[0] - 0.02, selector.pos[1] - 0.07), height=0.05, color='green') for selector in panel_selectors]
+    ai_selected_count_texts = [visual.TextStim(win, text="", pos=(selector.pos[0] + 0.01, selector.pos[1] - 0.07), height=0.05, color='red') for selector in panel_selectors]
+
 
     # Function to draw a specific panel
 # Function to draw a specific panel
@@ -69,8 +71,14 @@ def img_grid_selection(panels, win):
         if panel_changed:
             for i, (img_stim, frame_stim) in enumerate(zip(preloaded_images[panel_index], preloaded_frames[panel_index])):
                 is_selected = i in selected_images[panel_index]
+                is_ai_selected = ai_replace_used and i in new_pictures_indices[panel_index]
 
-                if is_selected:
+                if is_selected and is_ai_selected:
+                    img_stim.opacity = 0.8
+                    frame_stim.pos = locs[i]  # Set frame position
+                    frame_stim.draw()  # Draw frame for selected images
+
+                elif is_selected and not is_ai_selected:
                     img_stim.opacity = 0.5
                 else:
                     img_stim.opacity = 1
@@ -98,13 +106,6 @@ def img_grid_selection(panels, win):
 
 
 
-
-        
-        
-        
-    
-
-
         
         
         
@@ -118,19 +119,6 @@ def img_grid_selection(panels, win):
         for img_stim in preloaded_images[current_panel]:
             img_stim.draw()
             
-            
-    # Drawing frames conditionally
-        if ai_replace_used:
-            for i, frame_stim in enumerate(preloaded_frames[current_panel]):
-                # Check if the frame should be drawn for the current image
-                if (i in selected_images[current_panel] and not ai_replace_used) or (ai_replace_used and i in new_pictures_indices[current_panel]):
-                    frame_stim.draw()
-                else:
-                    # If the frame should not be drawn, ensure it's not drawn
-                    # This might involve setting visibility to False or not calling frame_stim.draw()
-                    pass
-                
-                
     # Drawing frames conditionally
         if ai_replace_used:
             for i, frame_stim in enumerate(preloaded_frames[current_panel]):
@@ -146,7 +134,7 @@ def img_grid_selection(panels, win):
         visited_panels.add(current_panel)
 
         # Draw and handle panel selectors
-        for i, (selector, selector_box, count_text) in enumerate(zip(panel_selectors, selector_boxes, selected_count_texts)):
+        for i, (selector, selector_box, count_text, ai_count_text) in enumerate(zip(panel_selectors, selector_boxes, selected_count_texts, ai_selected_count_texts)):
             if panel_changed or i == current_panel or i in visited_panels:
                 selector.color = 'black' if i == current_panel else 'white' if i in visited_panels else 'red'
                 selector_box.lineColor = 'white' if i == current_panel else None
@@ -158,11 +146,19 @@ def img_grid_selection(panels, win):
 
             # Update count text only if necessary
             self_selected_count = len(selected_images[i]) - len(new_pictures_indices[i])
+            ai_selected_count = len(new_pictures_indices[i])
 
-            if self_selected_count > 0:
+            if self_selected_count > 0 or ai_selected_count > 0:
                 count_text.text = str(self_selected_count)
                 count_text.color = 'green'
-                count_text.draw() 
+                count_text.draw()
+
+            if ai_selected_count > 0:
+                ai_count_text.text = f"+{ai_selected_count}"
+                ai_count_text.color = 'blue'
+                ai_count_text.draw()
+                
+                
             # Debounce mechanism for panel selection
             if time.time() - last_click_time > debounce_time and mouse.isPressedIn(selector_box):
                 current_panel = i
@@ -227,7 +223,7 @@ def img_grid_selection(panels, win):
 
         # Continue button
             
-        if total_selected >= 20 and not len(visited_panels) < len(panels) and total_selected <= 45:
+        if total_selected >= 20 and not len(visited_panels) < len(panels) and total_selected <= 45 and not ai_replace_used:
             
             picsLeft = 45 - total_selected
             AIREPLACE = visual.ButtonStim(win, text=f"Weitere Getränke automatisch auswählen und Fortfahren", pos=(-0.5, -0.25), color='white', fillColor="blue", borderColor=None, size=(0.4, 0.15), font="Arial")

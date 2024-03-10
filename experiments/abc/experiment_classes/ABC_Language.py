@@ -178,7 +178,7 @@ class ABCLanguage(Language):
                                 # Consequence texts. These will be appended to the general instruction.
                                 "Questions": {
                                     "Family": "improve your relationship with your family?",
-                                    "Career": "be more successful in your career PENIS?",
+                                    "Career": "be more successful in your career?",
                                     "Custom": "Custom"
                                 }
                             },

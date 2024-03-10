@@ -1,0 +1,97 @@
+{
+    "Participant ID": "101010",
+    "Sex": "Anderes",
+    "Condition": "",
+    "Condition_saved": "",
+    "Expectation": {},
+    "Training_Vividness": {},
+    "Consequence": {},
+    "Current Session": 0,
+    "non_alcoholic": {
+        "Sparkling Selection": {
+            "1": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_11_1_t.jpg",
+            "2": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_13_1_t.jpg",
+            "3": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_15_2_t.jpg",
+            "4": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_18_2_t.jpg",
+            "5": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_19_2_t.jpg",
+            "6": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_1_1_a.jpg",
+            "7": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_21_2_t.jpg",
+            "8": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_22_2_t.jpg",
+            "9": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_23_3_t.jpg",
+            "10": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_27_3_t.jpg",
+            "11": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_38_4_t.jpg",
+            "12": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_2_1_a.jpg",
+            "13": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_3_1_a.jpg",
+            "14": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_35_4_t.jpg",
+            "15": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_54__t.jpg",
+            "16": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_49_8_t.jpg",
+            "17": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_8_1_t.jpg",
+            "18": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_51__t.jpg"
+        },
+        "Non-Sparkling Selection": {
+            "1": "experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_12_1_t.jpg",
+            "2": "experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_18_2_t.jpg",
+            "3": "experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_19_2_t.jpg",
+            "4": "experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_1_1_a.jpg",
+            "5": "experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_23_3_t.jpg",
+            "6": "experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_36_4_t.jpg",
+            "7": "experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_38_5_t.jpg",
+            "8": "experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_33_4_t.jpg",
+            "9": "experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_53_8_t.jpg",
+            "10": "experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_47_6_t.jpg"
+        },
+        "Water Selection": {
+            "1": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_15_1_1_t.jpg",
+            "2": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_19_1_2_t.jpg",
+            "3": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_21_1_2_t.jpg",
+            "4": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_23_1_2_t.jpg",
+            "5": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_26_1_2_t.jpg",
+            "6": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_28_1_2_t.jpg",
+            "7": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_29_1_2_t.jpg",
+            "8": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_2_1_1_a.jpg",
+            "9": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_32_1_2_t.jpg",
+            "10": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_33_1_2_t.jpg",
+            "11": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_34_1_2_t.jpg",
+            "12": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_35_1_2_t.jpg",
+            "13": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_37_1_2_t.jpg",
+            "14": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_39_1_3_t.jpg",
+            "15": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_3_1_1_a.jpg",
+            "16": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_40_2_3_t.jpg",
+            "17": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_4_1_1_a.jpg"
+        },
+        "Automatic_Selection": {
+            "Sparkling Selection": {
+                "1": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_23_3_t.jpg",
+                "2": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_38_4_t.jpg",
+                "3": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_2_1_a.jpg",
+                "4": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_3_1_a.jpg",
+                "5": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_35_4_t.jpg",
+                "6": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_54__t.jpg",
+                "7": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_49_8_t.jpg",
+                "8": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_8_1_t.jpg",
+                "9": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_51__t.jpg"
+            },
+            "Non-Sparkling Selection": {
+                "1": "experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_36_4_t.jpg",
+                "2": "experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_38_5_t.jpg",
+                "3": "experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_33_4_t.jpg",
+                "4": "experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_53_8_t.jpg",
+                "5": "experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_47_6_t.jpg"
+            },
+            "Water Selection": {
+                "1": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_15_1_1_t.jpg",
+                "2": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_19_1_2_t.jpg",
+                "3": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_21_1_2_t.jpg",
+                "4": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_23_1_2_t.jpg",
+                "5": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_26_1_2_t.jpg",
+                "6": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_28_1_2_t.jpg",
+                "7": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_37_1_2_t.jpg",
+                "8": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_3_1_1_a.jpg",
+                "9": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_32_1_2_t.jpg",
+                "10": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_40_2_3_t.jpg",
+                "11": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_4_1_1_a.jpg"
+            }
+        }
+    },
+    "alcoholic": {}
+}

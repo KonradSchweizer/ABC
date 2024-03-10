@@ -1,0 +1,180 @@
+{
+    "Participant ID": "333222",
+    "Sex": "Anderes",
+    "Condition": "",
+    "Condition_saved": "",
+    "Expectation": {},
+    "Training_Vividness": {},
+    "Consequence": {},
+    "Current Session": 0,
+    "non_alcoholic": {
+        "Sparkling Selection": {
+            "1": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_13_1_t.jpg",
+            "2": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_14_2_t.jpg",
+            "3": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_18_2_t.jpg",
+            "4": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_21_2_t.jpg",
+            "5": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_25_3_t.jpg",
+            "6": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_27_3_t.jpg",
+            "7": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_28_3_t.jpg",
+            "8": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_29_3_t.jpg",
+            "9": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_38_4_t.jpg",
+            "10": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_31_3_t.jpg",
+            "11": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_32_3_t.jpg",
+            "12": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_35_4_t.jpg",
+            "13": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_46_7_t.jpg",
+            "14": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_47_7_t.jpg",
+            "15": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_49_8_t.jpg",
+            "16": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_51__t.jpg",
+            "17": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_52__t.jpg",
+            "18": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_54__t.jpg",
+            "19": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_55__t.jpg",
+            "20": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_6_1_t.jpg"
+        },
+        "Non-Sparkling Selection": {
+            "1": "experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_11_1_t.jpg",
+            "2": "experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_12_1_t.jpg",
+            "3": "experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_18_2_t.jpg",
+            "4": "experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_19_2_t.jpg",
+            "5": "experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_1_1_a.jpg",
+            "6": "experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_22_2_t.jpg",
+            "7": "experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_23_3_t.jpg",
+            "8": "experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_44_6_t.jpg",
+            "9": "experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_45_6_t.jpg",
+            "10": "experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_4_1_a.jpg",
+            "11": "experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_51_7_t.jpg",
+            "12": "experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_55_9_t.jpg"
+        },
+        "Water Selection": {
+            "1": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_11_1_1_t.jpg",
+            "2": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_23_1_2_t.jpg",
+            "3": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_15_1_1_t.jpg",
+            "4": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_19_1_2_t.jpg",
+            "5": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_32_1_2_t.jpg",
+            "6": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_3_1_1_a.jpg",
+            "7": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_35_1_2_t.jpg",
+            "8": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_54_4_3_t.jpg",
+            "9": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_45_3_3_t.jpg",
+            "10": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_46_3_3_t.jpg",
+            "11": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_47_3_3_t.jpg"
+        }
+    },
+    "alcoholic": {
+        "Beer Selection": {
+            "1": "experiments/abc/images/set_personalization/alcoholic\\Beer\\b_01_1_a.jpg",
+            "2": "experiments/abc/images/set_personalization/alcoholic\\Beer\\b_02_1_a.jpg",
+            "3": "experiments/abc/images/set_personalization/alcoholic\\Beer\\b_03_1_a.jpg",
+            "4": "experiments/abc/images/set_personalization/alcoholic\\Beer\\b_07_1_t.jpg",
+            "5": "experiments/abc/images/set_personalization/alcoholic\\Beer\\b_08_1_t.jpg",
+            "6": "experiments/abc/images/set_personalization/alcoholic\\Beer\\b_09_1_t.jpg",
+            "7": "experiments/abc/images/set_personalization/alcoholic\\Beer\\b_14_1_t.jpg",
+            "8": "experiments/abc/images/set_personalization/alcoholic\\Beer\\b_15_1_t.jpg",
+            "9": "experiments/abc/images/set_personalization/alcoholic\\Beer\\b_17_1_t.jpg",
+            "10": "experiments/abc/images/set_personalization/alcoholic\\Beer\\b_18_1_t.jpg",
+            "11": "experiments/abc/images/set_personalization/alcoholic\\Beer\\b_31_2_t.jpg",
+            "12": "experiments/abc/images/set_personalization/alcoholic\\Beer\\b_33_2_t.jpg",
+            "13": "experiments/abc/images/set_personalization/alcoholic\\Beer\\b_48_3_t.jpg",
+            "14": "experiments/abc/images/set_personalization/alcoholic\\Beer\\b_37_2_t.jpg",
+            "15": "experiments/abc/images/set_personalization/alcoholic\\Beer\\b_38_2_t.jpg",
+            "16": "experiments/abc/images/set_personalization/alcoholic\\Beer\\b_52_3_t.jpg"
+        },
+        "Wine Selection": {
+            "1": "experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_12_1_t.jpg",
+            "2": "experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_18_2_t.jpg",
+            "3": "experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_19_2_t.jpg",
+            "4": "experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_1_1_a.jpg",
+            "5": "experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_20_2_t.jpg",
+            "6": "experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_22_3_t.jpg",
+            "7": "experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_23_3_t.jpg",
+            "8": "experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_35_6_t.jpg",
+            "9": "experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_28_4_t.jpg",
+            "10": "experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_3_1_a.jpg",
+            "11": "experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_44_7_t.jpg",
+            "12": "experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_45_7_t.jpg",
+            "13": "experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_46_7_t.jpg",
+            "14": "experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_48_7_t.jpg",
+            "15": "experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_49_7_t.jpg",
+            "16": "experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_9_1_t.jpg"
+        },
+        "Liquor Selection": {
+            "1": "experiments/abc/images/set_personalization/alcoholic\\Wine\\w_01_1_1_a.jpg",
+            "2": "experiments/abc/images/set_personalization/alcoholic\\Wine\\w_03_1_1_a.jpg",
+            "3": "experiments/abc/images/set_personalization/alcoholic\\Wine\\w_04_1_1_a.jpg",
+            "4": "experiments/abc/images/set_personalization/alcoholic\\Wine\\w_09_1_3_t.jpg",
+            "5": "experiments/abc/images/set_personalization/alcoholic\\Wine\\w_10_1_3_t.jpg",
+            "6": "experiments/abc/images/set_personalization/alcoholic\\Wine\\w_11_1_3_t.jpg",
+            "7": "experiments/abc/images/set_personalization/alcoholic\\Wine\\w_13_1_4_t.jpg",
+            "8": "experiments/abc/images/set_personalization/alcoholic\\Wine\\w_17_2_1_t.jpg",
+            "9": "experiments/abc/images/set_personalization/alcoholic\\Wine\\w_19_2_2_t.jpg",
+            "10": "experiments/abc/images/set_personalization/alcoholic\\Wine\\w_22_2_2_t.jpg",
+            "11": "experiments/abc/images/set_personalization/alcoholic\\Wine\\w_23_2_3_t.jpg",
+            "12": "experiments/abc/images/set_personalization/alcoholic\\Wine\\w_31_3_1_t.jpg",
+            "13": "experiments/abc/images/set_personalization/alcoholic\\Wine\\w_54_5_3_t.jpg",
+            "14": "experiments/abc/images/set_personalization/alcoholic\\Wine\\w_45_4_2_t.jpg"
+        }
+    },
+    "Automatic_Selection_non_alcoholic": {
+        "Sparkling Selection": {
+            "1": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_25_3_t.jpg",
+            "2": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_18_2_t.jpg",
+            "3": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_29_3_t.jpg",
+            "4": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_38_4_t.jpg",
+            "5": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_31_3_t.jpg",
+            "6": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_32_3_t.jpg",
+            "7": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_35_4_t.jpg",
+            "8": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_46_7_t.jpg",
+            "9": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_47_7_t.jpg",
+            "10": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_49_8_t.jpg",
+            "11": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_51__t.jpg",
+            "12": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_52__t.jpg",
+            "13": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_54__t.jpg",
+            "14": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_55__t.jpg",
+            "15": "experiments/abc/images/set_personalization/non_alcoholic\\Non-Sparkling\\ns_6_1_t.jpg"
+        },
+        "Non-Sparkling Selection": {
+            "1": "experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_55_9_t.jpg",
+            "2": "experiments/abc/images/set_personalization/non_alcoholic\\Sparkling\\s_4_1_a.jpg"
+        },
+        "Water Selection": {
+            "1": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_11_1_1_t.jpg",
+            "2": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_23_1_2_t.jpg",
+            "3": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_32_1_2_t.jpg",
+            "4": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_3_1_1_a.jpg",
+            "5": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_54_4_3_t.jpg",
+            "6": "experiments/abc/images/set_personalization/non_alcoholic\\Water\\wa_47_3_3_t.jpg"
+        }
+    },
+    "Automatic_Selection_alcoholic": {
+        "Beer Selection": {
+            "1": "experiments/abc/images/set_personalization/alcoholic\\Beer\\b_15_1_t.jpg",
+            "2": "experiments/abc/images/set_personalization/alcoholic\\Beer\\b_17_1_t.jpg",
+            "3": "experiments/abc/images/set_personalization/alcoholic\\Beer\\b_18_1_t.jpg",
+            "4": "experiments/abc/images/set_personalization/alcoholic\\Beer\\b_31_2_t.jpg",
+            "5": "experiments/abc/images/set_personalization/alcoholic\\Beer\\b_33_2_t.jpg",
+            "6": "experiments/abc/images/set_personalization/alcoholic\\Beer\\b_48_3_t.jpg",
+            "7": "experiments/abc/images/set_personalization/alcoholic\\Beer\\b_37_2_t.jpg",
+            "8": "experiments/abc/images/set_personalization/alcoholic\\Beer\\b_38_2_t.jpg",
+            "9": "experiments/abc/images/set_personalization/alcoholic\\Beer\\b_52_3_t.jpg"
+        },
+        "Wine Selection": {
+            "1": "experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_20_2_t.jpg",
+            "2": "experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_35_6_t.jpg",
+            "3": "experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_28_4_t.jpg",
+            "4": "experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_3_1_a.jpg",
+            "5": "experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_44_7_t.jpg",
+            "6": "experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_46_7_t.jpg",
+            "7": "experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_48_7_t.jpg",
+            "8": "experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_49_7_t.jpg",
+            "9": "experiments/abc/images/set_personalization/alcoholic\\Liquor\\l_9_1_t.jpg"
+        },
+        "Liquor Selection": {
+            "1": "experiments/abc/images/set_personalization/alcoholic\\Wine\\w_01_1_1_a.jpg",
+            "2": "experiments/abc/images/set_personalization/alcoholic\\Wine\\w_09_1_3_t.jpg",
+            "3": "experiments/abc/images/set_personalization/alcoholic\\Wine\\w_19_2_2_t.jpg",
+            "4": "experiments/abc/images/set_personalization/alcoholic\\Wine\\w_22_2_2_t.jpg",
+            "5": "experiments/abc/images/set_personalization/alcoholic\\Wine\\w_23_2_3_t.jpg",
+            "6": "experiments/abc/images/set_personalization/alcoholic\\Wine\\w_31_3_1_t.jpg",
+            "7": "experiments/abc/images/set_personalization/alcoholic\\Wine\\w_54_5_3_t.jpg",
+            "8": "experiments/abc/images/set_personalization/alcoholic\\Wine\\w_45_4_2_t.jpg"
+        }
+    }
+}
